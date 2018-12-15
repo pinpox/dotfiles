@@ -1,0 +1,25 @@
+# vim: set ft=sh
+alias q="exit"
+alias v="nvim"
+alias vim="nvim"
+alias "rubocop --version"="echo 0.29.1"
+alias "git igpush"="git commit -m\"ignore\" && git push"
+alias y="yaourt"
+alias paste=" curl -F c=@- https://ptpb.pw/"
+alias snvim="sudo -E nvim"
+alias weather='curl -4 http://wttr.in/Koeln'
+alias qr_gen="qrencode -t ansi -o-"
+alias cats='highlight -O ansi'
+alias pupdate='sudo pacman -Syu'
+alias top='htop'
+alias get_esp32="export PATH=$PATH:$HOME/esp/xtensa-esp32-elf/bin"
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias sudo="sudo --askpass"
+alias m="neomutt"
+alias cc="clang -Wall -Wextra -pedantic -std=c99 -Wshadow"
+
+alias ga="git add ."
+alias gac='git commit -a'
+alias gg='git commit -a && git push'
+alias gp='git push'
+alias gl='git pull'
