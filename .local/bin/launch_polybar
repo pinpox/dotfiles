@@ -1,0 +1,5 @@
+#!/bin/bash
+
+killall polybar 
+
+for i in $(polybar -m | awk -F: '{print $1}'); do MONITOR=$i polybar primary -c ~/.config/polybar/config & done
