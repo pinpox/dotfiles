@@ -77,12 +77,12 @@ function setup_colors() {
 
 # Function to confirm execution. Call confirmExecute <message> <command>
 function confirmExecute() {
-	read -p $1 -n 1 -r
+	read -p "$1" -n 1 -r
 	echo
 
 	if [[ $REPLY =~ ^(y|Y| ) ]] || [[ -z $REPLY ]];
 	then
-		`$2`
+		eval $2
 	fi
 }
 
@@ -92,3 +92,4 @@ confirmExecute "Setup VIM/Neovim? [Y/n]" setup_vim
 confirmExecute "Set ZSH as shell? [Y/n]" "chsh -s /bin/zsh"
 confirmExecute "Install termite terminfo? [Y/n]" "tic -x termite-terminfo"
 confirmExecute "Setup colors with base16-manager (base16-$BASE16_THEME)? [Y/n]" setup_colors
+
