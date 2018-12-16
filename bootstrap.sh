@@ -2,7 +2,8 @@
 
 GIT_REPO=""
 CONF_DIR_NAME=".dotfiles"
-BACKUP_DIR="~/.config-backup-`date --iso-8601`"
+CURRENT_TIME=`date +"%Y-%m-%dT%H-%M-%S"`
+BACKUP_DIR="~/config-backup-$CURRENT_TIME"
 BASE16_THEME="snazzy"
 
 if [[ $(ssh -T git@github.com) == *"success"* ]]; then
