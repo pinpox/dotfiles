@@ -20,17 +20,17 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 export SUDO_ASKPASS="/home/binaryplease/.local/bin/passsudo"
 export EDITOR=/usr/bin/nvim
 export GOPATH=~/.go
+
+# Keep .local/bin befor .go/bin to set correct antibody location
 export PATH="$PATH:\
+.local/bin:\
 /usr/bin/core_perl:\
 /usr/bin/site_perl:\
 /usr/bin/vendor_perl:\
 /usr/bin:\
-/home/binaryplease/.go/bin:\
+.go/bin:\
 /usr/lib/jvm/default/bin:\
 /usr/local/bin:\
-.local/bin:\
-/home/binaryplease/.cargo/bin:\
-/home/binaryplease/.local/bin:\
 /usr/local/sbin"
 export VISUAL=/usr/bin/nvim
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
