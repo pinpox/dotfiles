@@ -507,6 +507,9 @@ separator_color = "#eff0eb"
 frame_color = "#eff0eb"
 separator_color = "#eff0eb"
 
+frame_color = "#eff0eb"
+separator_color = "#eff0eb"
+
 [base16_low]
     msg_urgency = low
     background = "#34353e"
