@@ -1,6 +1,6 @@
-# zmodload zsh/zprof
 # Prevents grep options deprecation message
 unset GREP_OPTIONS
+
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
@@ -15,7 +15,7 @@ bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
 bindkey "$terminfo[kcud1]" down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
-autoload -U compinit && compinit
+
 
 export SUDO_ASKPASS="/home/binaryplease/.local/bin/passsudo"
 export EDITOR=/usr/bin/nvim
@@ -55,5 +55,11 @@ source ~/.zsh_aliases
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
-# zprof
-alias config='/usr/bin/git --git-dir=/home/binaryplease/.dotfiles/ --work-tree=/home/binaryplease'
+
+# PROMPT='$(gbt $?)'
+# autoload -Uz add-zsh-hook
+# prompt_mimir_cmd() { /home/binaryplease/.go/bin/mimir }
+# add-zsh-hook precmd prompt_mimir_cmd
+
+# prompt_symbol='❯'
+# PROMPT='%(?.%F{magenta}.%F{red})${prompt_symbol}%f '

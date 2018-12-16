@@ -23,13 +23,7 @@ exec_always nitrogen --restore
 exec nm-applet
 # exec blueman-applet
 exec_always ~/.screenlayout/default.sh
-# exec_always ~/.local/bin/launch_polybar
-
-# bar {
-#   position top
-#   status_command exec ~/mybar
-#   font pango:DejaVu Sans Mono 10
-# }
+exec_always ~/.local/bin/launch_polybar
 
 bindsym --release $mod+n exec  xdotool type --clearmodifiers --window $(xdotool getwindowfocus) '¯\_(ツ)_/¯'
 

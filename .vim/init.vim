@@ -40,7 +40,6 @@ set undodir=~/.vimtmp          " Dir for undofiles, same dir as the tempdir
 set wildmenu                   " Complete commands
 set wrapscan                   " Wrap when searching to beginning
 set path+=**                   " Search down into subfolders, provides tab-completion for all file-related tasks
-set splitbelow splitright      " Spit below and right
 syntax enable                  " enable syntax highlighting
 
 " MISC:
