@@ -2,12 +2,8 @@
 
 ## Setup
 
-To setup the dotsfiles on a new system run the setup script using
+To setup the dotfiles on a new system run the setup script using:
 
 ```
-curl -Lks http://bit.do/dotinstall | /bin/bash
-```
-or
-```
-curl -Lks https://gitlab.com/binaryplease/dotfiles/raw/master/bootstrap.sh | /bin/bash
+curl -Lks https://raw.githubusercontent.com/binaryplease/dotfiles/master/bootstrap.sh | /bin/bash
 ```
