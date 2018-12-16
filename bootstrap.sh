@@ -80,6 +80,29 @@ function setup_colors() {
 	base16-manager set $BASE16_THEME
 }
 
+function install_antibody() {
+	# Instead of curl -sL git.io/antibody | sh -s , I want user-specific install
+
+	set -e
+	DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download"
+	test -z "$TMPDIR" && TMPDIR="$(mktemp -d)"
+
+	last_version() {
+		curl -s https://raw.githubusercontent.com/getantibody/homebrew-tap/master/Formula/antibody.rb |
+			grep url |
+			cut -f8 -d'/'
+	}
+
+	version="$(last_version)" || true
+	echo "Downloading antibody $version for $(uname -s)_$(uname -m)..."
+	rm -f /tmp/antibody.tar.gz
+	curl -s -L -o /tmp/antibody.tar.gz \
+		"$DOWNLOAD_URL/$version/antibody_$(uname -s)_$(uname -m).tar.gz"
+
+	tar -xf /tmp/antibody.tar.gz -C "$TMPDIR" || true
+	mv -f "$TMPDIR"/antibody ~/.local/bin/antibody
+}
+
 # Function to confirm execution. Call confirmExecute <message> <command>
 function confirmExecute() {
 	read -p "$1" -n 1 -r
