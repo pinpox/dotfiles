@@ -87,16 +87,17 @@ function setup_colors() {
 
 function install_antibody() {
 	# Instead of curl -sL git.io/antibody | sh -s , I want user-specific install
-	version=curl -s https://raw.githubusercontent.com/getantibody/homebrew-tap/master/Formula/antibody.rb |    grep url |    cut -f8 -d'/'
+	version=`curl -s https://raw.githubusercontent.com/getantibody/homebrew-tap/master/Formula/antibody.rb |    grep url |    cut -f8 -d'/'`
 
 	set -e
-	DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download"
 	test -z "$TMPDIR" && TMPDIR="$(mktemp -d)"
 
-	echo "Downloading antibody $version for $(uname -s)_$(uname -m)..."
 	rm -f ~/antibody.tar.gz
 
-	curl -s -L -o ~/antibody.tar.gz "$DOWNLOAD_URL/$version/antibody_$(uname -s)_$(uname -m).tar.gz"
+	DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download/$version/antibody_$(uname -s)_$(uname -m).tar.gz"
+	echo "Downloading antibody $version for $(uname -s)_$(uname -m) from DOWNLOAD_URL"
+
+	curl -s -L -o ~/antibody.tar.gz "$DOWNLOAD_URL"
 
 	tar -xf ~/antibody.tar.gz -C "$TMPDIR" || true
 	mv -f "$TMPDIR"/antibody ~/.local/bin/antibody
