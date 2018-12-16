@@ -15,11 +15,4 @@ alias top='htop'
 alias get_esp32="export PATH=$PATH:$HOME/esp/xtensa-esp32-elf/bin"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias sudo="sudo --askpass"
-alias m="neomutt"
-alias cc="clang -Wall -Wextra -pedantic -std=c99 -Wshadow"
-
-alias ga="git add ."
-alias gac='git commit -a'
-alias gg='git commit -a && git push'
-alias gp='git push'
-alias gl='git pull'
+alias cc="clang -Wall -Wextra -pedantic -std=c99 -Wshadow -Weverything"
