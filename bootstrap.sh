@@ -25,6 +25,7 @@ function backup_conf() {
 }
 
 function setup_dotfiles() {
+	echo "Setting up dotfiles..."
 	cd ~
 	git clone --bare $GIT_REPO $HOME/$CONF_DIR_NAME
 	function config {
@@ -39,6 +40,8 @@ function setup_dotfiles() {
 }
 
 function setup_vim() {
+
+	echo "Setting up vim/neovim..."
 	if type "nvim" > /dev/null
 	then
 		nvim -c 'PlugClean|PlugInstall|qa'
@@ -51,6 +54,7 @@ function setup_vim() {
 }
 
 function check_dependencies() {
+	echo "Checking dependencies..."
 	declare -a arr=("git" "base16-manager" "nvim")
 
 	for i in "${arr[@]}"
@@ -63,6 +67,7 @@ function check_dependencies() {
 }
 
 function setup_colors() {
+	echo "Setting up colors with base16-manager..."
 	mkdir -p .config/rofi
 	mkdir -p .Xresources.d
 
@@ -77,12 +82,12 @@ function setup_colors() {
 
 # Function to confirm execution. Call confirmExecute <message> <command>
 function confirmExecute() {
-	read -p $1 -n 1 -r
+	read -p "$1" -n 1 -r
 	echo
 
 	if [[ $REPLY =~ ^(y|Y| ) ]] || [[ -z $REPLY ]];
 	then
-		`$2`
+		eval $2
 	fi
 }
 
@@ -92,3 +97,4 @@ confirmExecute "Setup VIM/Neovim? [Y/n]" setup_vim
 confirmExecute "Set ZSH as shell? [Y/n]" "chsh -s /bin/zsh"
 confirmExecute "Install termite terminfo? [Y/n]" "tic -x termite-terminfo"
 confirmExecute "Setup colors with base16-manager (base16-$BASE16_THEME)? [Y/n]" setup_colors
+
