@@ -2,7 +2,7 @@
 # font = Ubuntu Mono 12
 # font = Fira Code 10
 # font = Meslo LG S DZ 10
-font = monospace 12
+font = monospace 8
 audible_bell = false
 
 scroll_on_output = false
