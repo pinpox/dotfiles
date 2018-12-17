@@ -2,7 +2,7 @@
 
 GIT_REPO=""
 CONF_DIR_NAME=".dotfiles"
-CURRENT_TIME=`date +"%Y-%m-%dT%H-%M-%S"`
+CURRENT_TIME=$(date +"%Y-%m-%dT%H-%M-%S")
 BACKUP_DIR="config-backup-$CURRENT_TIME"
 BASE16_THEME="snazzy"
 
@@ -15,12 +15,12 @@ else
 fi
 
 function backup_conf() {
-	while read fn
+	while read -r fn
 	do
-		con="$(dirname $fn)"
+		con="$(dirname "$fn")"
 		con="$BACKUP_DIR/$con"
-		mkdir -p $con
-		mv $fn $(realpath $con)
+		mkdir -p "$con"
+		mv "$fn" "$(realpath "$con")"
 	done
 }
 
@@ -28,9 +28,9 @@ function setup_dotfiles() {
 	mv $CONF_DIR_NAME "dotfiles-repo-backup-$CURRENT_TIME"
 	echo "Setting up dotfiles..."
 	cd ~
-	git clone --bare $GIT_REPO $HOME/$CONF_DIR_NAME
+	git clone --bare $GIT_REPO "$HOME/$CONF_DIR_NAME"
 	function config {
-		/usr/bin/git --git-dir=$HOME/$CONF_DIR_NAME/ --work-tree=$HOME $@
+		/usr/bin/git --git-dir="$HOME/$CONF_DIR_NAME/" --work-tree="$HOME" "$@"
 	}
 	if grep -Fxq ".gitignore" $CONF_DIR_NAME
 	then
@@ -38,7 +38,7 @@ function setup_dotfiles() {
 	else
 		echo "$CONF_DIR_NAME" >> .gitignore
 	fi
-	mkdir -p $BACKUP_DIR
+	mkdir -p "$BACKUP_DIR"
 	echo "Backing up pre-existing dot files.";
 	config checkout 2>&1 | awk '/^[[:space:]]/{print $1}' | backup_conf
 	config checkout
@@ -65,7 +65,7 @@ function check_dependencies() {
 
 	for i in "${arr[@]}"
 	do
-		if ! [ -x "$(command -v $i)" ]; then
+		if ! [ -x "$(command -v "$i")" ]; then
 			echo "Error: $i is not installed." >&2
 			exit 1
 		fi
@@ -107,14 +107,14 @@ function install_antibody() {
 }
 
 	echo "Downloading antibody $version for $(uname -s)_$(uname -m)..."
-	rm -f $TMPDIR/antibody.tar.gz
-	curl -s -L -o $TMPDIR/antibody.tar.gz \
+	rm -f "$TMPDIR/antibody.tar.gz"
+	curl -s -L -o "$TMPDIR/antibody.tar.gz" \
 		"$DOWNLOAD_URL/$version/antibody_$(uname -s)_$(uname -m).tar.gz" || true
 
-	tar -xf $TMPDIR/antibody.tar.gz -C "$TMPDIR"
+	tar -xf "$TMPDIR/antibody.tar.gz" -C "$TMPDIR"
 
 	mv -f "$TMPDIR"/antibody ~/.local/bin/antibody
-	which antibody
+	command -v antibody
 }
 
 # Function to confirm execution. Call confirmExecute <message> <command>
@@ -124,7 +124,7 @@ function confirmExecute() {
 
 	if [[ $REPLY =~ ^(y|Y| ) ]] || [[ -z $REPLY ]];
 	then
-		eval $2
+		eval "$2"
 	fi
 }
 
