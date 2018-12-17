@@ -92,17 +92,7 @@ last_version_antibody() {
 		cut -f8 -d'/'
 }
 
-download_antibody() {
-	version="$(last_version_antibody)" || true
-	test -z "$version" && {
-		echo "Unable to get antibody version."
-	exit 1
-}
-}
 
-function extract_antibody() {
-	tar -xf /tmp/antibody.tar.gz -C "$TMPDIR"
-}
 
 function install_antibody() {
 
@@ -110,14 +100,18 @@ function install_antibody() {
 	DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download"
 	test -z "$TMPDIR" && TMPDIR="$(mktemp -d)"
 
+	version="$(last_version_antibody)" || true
+	test -z "$version" && {
+		echo "Unable to get antibody version."
+	exit 1
+
 	echo "Downloading antibody $version for $(uname -s)_$(uname -m)..."
-	rm -f /tmp/antibody.tar.gz
-	curl -s -L -o /tmp/antibody.tar.gz \
-		"$DOWNLOAD_URL/$version/antibody_$(uname -s)_$(uname -m).tar.gz"
+	rm -f $TMPDIR/antibody.tar.gz
+	curl -s -L -o $TMPDIR/antibody.tar.gz \
+		"$DOWNLOAD_URL/$version/antibody_$(uname -s)_$(uname -m).tar.gz" || true
 
+	tar -xf $TMPDIR/antibody.tar.gz -C "$TMPDIR"
 
-	download_antibody
-	extract_antibody || true
 	mv -f "$TMPDIR"/antibody ~/.local/bin/antibody
 	which antibody
 }
