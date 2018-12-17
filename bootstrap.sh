@@ -121,6 +121,12 @@ function install_antibody() {
 
 }
 
+function setup_git {
+	git config --global user.name "Pablo Ovelleiro Corral"
+	git config --global user.email "pablo1@mailbox.org"
+	git config --global commit.gpgsign true
+}
+
 # Function to confirm execution. Call confirmExecute <message> <command>
 confirmExecute() { read -p "$1" -n 1 -r; echo; shift; [[ $REPLY = [yY] || -z $REPLY ]] && "$@"; }
 
@@ -131,4 +137,5 @@ confirmExecute "Set ZSH as shell? [Y/n]" chsh -s /bin/zsh
 confirmExecute "Install antibody? [Y/n]" install_antibody
 confirmExecute "Install termite terminfo? [Y/n]" tic -x termite.terminfo
 confirmExecute "Setup colors with base16-manager (base16-$BASE16_THEME)? [Y/n]" setup_colors
+confirmExecute "Setup git configuration? [Y/n]" setup_git
 
