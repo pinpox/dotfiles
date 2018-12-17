@@ -25,6 +25,7 @@ function backup_conf() {
 }
 
 function setup_dotfiles() {
+	mv $CONF_DIR_NAME "dotfiles-repo-backup-$CURRENT_TIME"
 	echo "Setting up dotfiles..."
 	cd ~
 	git clone --bare $GIT_REPO $HOME/$CONF_DIR_NAME
