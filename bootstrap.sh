@@ -135,7 +135,7 @@ confirmExecute "Setup dotfiles? [Y/n]"  setup_dotfiles
 confirmExecute "Setup VIM/Neovim? [Y/n]" setup_vim
 confirmExecute "Set ZSH as shell? [Y/n]" chsh -s /bin/zsh
 confirmExecute "Install antibody? [Y/n]" install_antibody
-confirmExecute "Install termite terminfo? [Y/n]" tic -x termite.terminfo
+confirmExecute "Install termite terminfo? [Y/n]" tic -x ./local/share/termite.terminfo
 confirmExecute "Setup colors with base16-manager (base16-$BASE16_THEME)? [Y/n]" setup_colors
 confirmExecute "Setup git configuration? [Y/n]" setup_git
 
