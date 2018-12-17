@@ -122,21 +122,13 @@ function install_antibody() {
 }
 
 # Function to confirm execution. Call confirmExecute <message> <command>
-function confirmExecute() {
-	read -p "$1" -n 1 -r
-	echo
+confirmExecute() { read -p "$1" -n 1 -r; echo; shift; [[ $REPLY = [yY] || -z $REPLY ]] && "$@"; }
 
-	if [[ $REPLY =~ ^(y|Y| ) ]] || [[ -z $REPLY ]];
-	then
-		eval "$2"
-	fi
-}
-
-confirmExecute "Check for missing dependencies? [Y/n]" "check_dependencies"
-confirmExecute "Setup dotfiles? [Y/n]"  "setup_dotfiles"
-confirmExecute "Setup VIM/Neovim? [Y/n]" "setup_vim"
-confirmExecute "Set ZSH as shell? [Y/n]" "chsh -s /bin/zsh"
-confirmExecute "Install antibody? [Y/n]" "install_antibody"
-confirmExecute "Install termite terminfo? [Y/n]" "tic -x termite.terminfo"
-confirmExecute "Setup colors with base16-manager (base16-$BASE16_THEME)? [Y/n]" "setup_colors"
+confirmExecute "Check for missing dependencies? [Y/n]" check_dependencies
+confirmExecute "Setup dotfiles? [Y/n]"  setup_dotfiles
+confirmExecute "Setup VIM/Neovim? [Y/n]" setup_vim
+confirmExecute "Set ZSH as shell? [Y/n]" chsh -s /bin/zsh
+confirmExecute "Install antibody? [Y/n]" install_antibody
+confirmExecute "Install termite terminfo? [Y/n]" tic -x termite.terminfo
+confirmExecute "Setup colors with base16-manager (base16-$BASE16_THEME)? [Y/n]" setup_colors
 
