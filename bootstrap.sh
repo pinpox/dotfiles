@@ -115,6 +115,10 @@ function install_antibody() {
 
 	mv -f "$TMPDIR"/antibody ~/.local/bin/antibody
 	command -v antibody
+
+	echo "Installing ZSH plugins..."
+    antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
+
 }
 
 # Function to confirm execution. Call confirmExecute <message> <command>
