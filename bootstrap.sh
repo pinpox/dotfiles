@@ -85,22 +85,40 @@ function setup_colors() {
 	base16-manager set $BASE16_THEME
 }
 
+last_version_antibody() {
+	curl -s https://raw.githubusercontent.com/getantibody/homebrew-tap/master/Formula/antibody.rb |
+		grep url |
+		cut -f8 -d'/'
+}
+
+download_antibody() {
+	version="$(last_version_antibody)" || true
+	test -z "$version" && {
+		echo "Unable to get antibody version."
+	exit 1
+}
+}
+
+function extract_antibody() {
+	tar -xf /tmp/antibody.tar.gz -C "$TMPDIR"
+}
+
 function install_antibody() {
-	# Instead of curl -sL git.io/antibody | sh -s , I want user-specific install
-	version=`curl -s https://raw.githubusercontent.com/getantibody/homebrew-tap/master/Formula/antibody.rb |    grep url |    cut -f8 -d'/'`
 
 	set -e
+	DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download"
 	test -z "$TMPDIR" && TMPDIR="$(mktemp -d)"
 
-	rm -f ~/antibody.tar.gz
+	echo "Downloading antibody $version for $(uname -s)_$(uname -m)..."
+	rm -f /tmp/antibody.tar.gz
+	curl -s -L -o /tmp/antibody.tar.gz \
+		"$DOWNLOAD_URL/$version/antibody_$(uname -s)_$(uname -m).tar.gz"
 
-	DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download/$version/antibody_$(uname -s)_$(uname -m).tar.gz"
-	echo "Downloading antibody $version for $(uname -s)_$(uname -m) from DOWNLOAD_URL"
 
-	curl -s -L -o ~/antibody.tar.gz "$DOWNLOAD_URL"
-
-	tar -xf ~/antibody.tar.gz -C "$TMPDIR" || true
+	download_antibody
+	extract_antibody || true
 	mv -f "$TMPDIR"/antibody ~/.local/bin/antibody
+	which antibody
 }
 
 # Function to confirm execution. Call confirmExecute <message> <command>
@@ -118,7 +136,7 @@ confirmExecute "Check for missing dependencies? [Y/n]" "check_dependencies"
 confirmExecute "Setup dotfiles? [Y/n]"  "setup_dotfiles"
 confirmExecute "Setup VIM/Neovim? [Y/n]" "setup_vim"
 confirmExecute "Set ZSH as shell? [Y/n]" "chsh -s /bin/zsh"
-confirmExecute "Set ZSH as shell? [Y/n]" "install_antibody"
+confirmExecute "Install antibody? [Y/n]" "install_antibody"
 confirmExecute "Install termite terminfo? [Y/n]" "tic -x termite-terminfo"
 confirmExecute "Setup colors with base16-manager (base16-$BASE16_THEME)? [Y/n]" "setup_colors"
 
