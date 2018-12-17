@@ -35,8 +35,8 @@ bindsym $mod+plus scratchpad show
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite -e nvim
+bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec  urxvt -e nvim
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -188,4 +188,4 @@ client.urgent $base02 $base08 $base07 $base08
 
 bindsym $mod+p exec rofi -show run -lines 7 -eh 1 -bw 0  -fullscreen -padding 200
 bindsym $mod+Shift+p exec rofi-pass -show combi -lines 7 -eh 3 -bw 0 -matching fuzzy
-bindcode 156 exec --no-startup-id "termite -e hollywood"
+bindcode 156 exec --no-startup-id " urxvt -e hollywood"
