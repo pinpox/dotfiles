@@ -100,9 +100,10 @@ let g:fzf_files_options = '--preview "(coderay {} || cat {}) 2> /dev/null | head
 
 " APPEARANCE:
 "
-hi Normal ctermfg=252 ctermbg=none
+" hi Normal ctermfg=252 ctermbg=none
 " let base16colorspace=256
-" set background=dark " for the dark version
+colorscheme noctu
+set background=dark " for the dark version
 let g:airline_powerline_fonts = 0            " Powerline Symbols in bar
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1          " changfe cursor depending on mode
 set conceallevel=0
@@ -139,11 +140,4 @@ let g:deoplete#omni_patterns.tex =
             \ . '|%(include%(only)?|input)\s*\{[^}]*'
             \ . ')\m'
 
-let g:one_allow_italics = 1 " I love italic for comments
-" let g:airline_theme='one'
-source ~/.config/nvim/colorscheme.vim
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif

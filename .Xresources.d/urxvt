@@ -1,40 +1,51 @@
+! vi: ft=xdefaults
+
+
 ! General settings
-URxvt.saveLines: 2000
-URxvt.scrollBar: False
-URxvt.scrollstyle: rxvt
-URxvt.termName: xterm-256color
-URxvt.urgentOnBell: True
-URxvt.cursorBlink: False
-
-! Extensions
-URxvt.perl-ext-common: default,matcher,clipboard,keyboard-select,url-select
-URxvt.matcher.button  : 1
-URxvt.urlLauncher: xdg-open
-URxvt.urlButton: 1
-URxvt.underlineURLs: True
-
-URxvt.copyCommand:  xclip -i -selection clipboard
-URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.saveLines:              2000
+URxvt.scrollstyle:            rxvt
+URxvt.termName:               xterm-256color
+!URxvt*termName:              rxvt-256color
+!URxvt*loginShell:            true
+URxvt.urgentOnBell:           True
+URxvt.cursorBlink:            True
+! Disable that stupid ISO mode
+URxvt.iso14755:               false
+URxvt.iso14755_52:            false
 
 
-! do not scroll with output
-URxvt*scrollTtyOutput: false
-
+!Scrolling
 ! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-URxvt*scrollWithBuffer: true
-
+URxvt*scrollWithBuffer:       true
 ! scroll back to the bottom on keypress
-URxvt*scrollTtyKeypress: true
-
+URxvt*scrollTtyKeypress:      true
 ! Disable the scrollback buffer for the secondary screen (e.g. less)
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
+URxvt.secondaryScreen:        1
+URxvt.secondaryScroll:        0
 
 
-!DejaVu Sans
-URxvt.font: xft:DejaVu Sans Mono-8
-URxvt.letterSpace: -1
+! Appearance
+!Xft.dpi:                     109
+URxvt.font:                   xft:DejaVu Sans Mono-8
+!URxvt*font:                  xft:Menlo:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt.letterSpace:            -1
+!URxvt*lineSpace:             1
+URxvt.internalBorder:         10
+URxvt.scrollBar:              False
 
 
+! Clipboard
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.autocopy:     true
+URxvt.copyCommand:            xclip -i -selection clipboard
+URxvt.pasteCommand:           xclip -o -selection clipboard
+
+
+! Extensions
+URxvt.perl-ext-common:        default,matcher,clipboard,keyboard-select,url-select
+URxvt.matcher.button:         1
+URxvt.urlLauncher:            xdg-open
+URxvt.urlButton:              1
+URxvt.underlineURLs:          True
+

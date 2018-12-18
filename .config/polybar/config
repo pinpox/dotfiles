@@ -1,20 +1,20 @@
 [colors]
 background = ${xrdb:color0:#222}
-background-alt = ${xrdb:color10:#222}
+background-alt = ${xrdb:color8:#222}
 foreground = ${xrdb:color7:#222}
-foreground-alt = ${xrdb:color11:#222}
+foreground-alt = ${xrdb:color8:#222}
 primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color1:#222}
 alert = ${xrdb:color1:#222}
 
-color-line-1 = ${xrdb:color8:#222}
-color-line-2 = ${xrdb:color9:#222}
-color-line-3 = ${xrdb:color10:#222}
-color-line-4 = ${xrdb:color11:#222}
-color-line-5 = ${xrdb:color12:#222}
-color-line-6 = ${xrdb:color13:#222}
-color-line-7 = ${xrdb:color14:#222}
-color-line-8 = ${xrdb:color15:#222}
+color-line-1 = ${xrdb:color1:#222}
+color-line-2 = ${xrdb:color1:#222}
+color-line-3 = ${xrdb:color2:#222}
+color-line-4 = ${xrdb:color3:#222}
+color-line-5 = ${xrdb:color4:#222}
+color-line-6 = ${xrdb:color5:#222}
+color-line-7 = ${xrdb:color6:#222}
+color-line-8 = ${xrdb:color8:#222}
 
 [bar/primary]
 bottom = true
