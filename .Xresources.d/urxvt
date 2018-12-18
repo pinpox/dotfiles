@@ -36,3 +36,5 @@ URxvt.font: xft:DejaVu Sans Mono-8
 URxvt.letterSpace: -1
 
 
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
