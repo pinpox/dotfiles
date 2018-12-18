@@ -1,11 +1,11 @@
- vi: ft=xdefaults
+! vi: ft=xdefaults
+
+
 ! Colors
-!*background:   #282a36
 *background:   #1e1f29
 *foreground:   #e2e4e5
 *cursorColor:  #e2e4e5
 
-! *color0:       #33303b
 *color0:       #1e1f29
 *color8:       #4f4b58
 
@@ -30,8 +30,5 @@
 *color7:       #eff0eb
 *color15:      #eff0eb
 
-
-
-
-
-
+!*background:   #282a36
+!*color0:       #33303b
