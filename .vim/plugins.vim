@@ -9,6 +9,10 @@ Plug 'jamessan/vim-gnupg'
 " Plug 'reewr/vim-monokai-phoenix'                                " Colortheme
 " Plug 'tclem/vim-arduino'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }          " Latex preview Plug
+
+Plug 'jeffkreeftmeijer/vim-dim'
+
+Plug 'noahfrederick/vim-noctu'
 Plug 'lukaszkorecki/workflowish'
 " Plug 'vim-latex/vim-latex'
 Plug 'AndrewRadev/switch.vim'                                     " Switch segments of text with predefined replacements
