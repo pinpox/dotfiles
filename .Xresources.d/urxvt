@@ -26,9 +26,9 @@ URxvt.secondaryScroll:        0
 
 ! Appearance
 !Xft.dpi:                     109
-!URxvt.font:                   xft:DejaVu Sans Mono-8
-URxvt.font:                   xft:monospace:pixelsize=15
-URxvt.letterSpace:            -1
+URxvt.font:                   xft:DejaVu Sans Mono:size=9
+!URxvt.font:                   xft:monospace:pixelsize=15
+!URxvt.letterSpace:            -3
 !URxvt*lineSpace:             1
 URxvt.internalBorder:         10
 URxvt.scrollBar:              False
@@ -49,3 +49,31 @@ URxvt.urlLauncher:            xdg-open
 URxvt.urlButton:              1
 URxvt.underlineURLs:          True
 
+
+
+!URxvt*saveline: 15000
+!URxvt*termName: rxvt-256color
+!URxvt*iso14755: false
+!URxvt*depth: 32
+!URxvt*background: [80]#cec3ba
+!URxvt*scrollBar: false
+!URxvt*scrollBar_right: false
+!URxvt*internalBorder: 20
+!URxvt*externalBorder: 0
+!URxvt*letterSpace: -0.5
+!URxvt.font: xft:Inconsolata:Medium:size=11, xft:FontAwesome:size=9
+!URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+!URxvt.copyCommand: xclip -i -selection clipboard
+!URxvt.pasteCommand: xclip -o -selection clipboard
+!URxvt.keysym.m-c: perl:clipboard:copy
+!URxvt.keysym.m-v: perl:clipboard:paste
+!URxvt.urlLauncher: exo-open
+!URxvt.underlineURLs: true
+!URxvt.urlButton: 1
+!URxvt.geometry: 90x30
+!URxvt.tabbed.tabbar-fg: 4
+!URxvt.tabbed.tabbar-bg: 16
+!URxvt.tabbed.tab-fg: 15
+!URxvt.tabbed.tab-bg: 4
+!URxvt*buffered: false
+!https://gitlab.com/peamapeam/my-dot-files/blob/master/.Xresources
