@@ -9,6 +9,6 @@ bash <(curl -Lks https://raw.githubusercontent.com/binaryplease/dotfiles/master/
 ```
 
 ## Fonts
-extra/ttf-dejavu
-community/awesome-terminal-fonts
-extra/bdf-unifont
+- extra/ttf-dejavu
+- community/awesome-terminal-fonts
+- extra/bdf-unifont
