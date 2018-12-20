@@ -1,19 +1,11 @@
 ! vi: ft=xdefaults
 
 
+! General settings
 Xft*dpi:                141
 Xft*antialias:          true
 Xft*hinting:            full
 
-! 256 color space
-
-rofi.color-enabled: true
-rofi.bg: #ff0000
-rofi.modi: run,ssh,window
-rofi.fullscreen: true
-rofi.lines: 3
-rofi.padding: 400
-rofi.eh: 2
 #include ".Xresources.d/colors"
 #include ".Xresources.d/urxvt"
 #include ".Xresources.d/rofi"
