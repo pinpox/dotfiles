@@ -105,27 +105,9 @@ let g:fzf_files_options = '--preview "(coderay {} || cat {}) 2> /dev/null | head
 colorscheme noctu
 set background=dark " for the dark version
 let g:airline_powerline_fonts = 0            " Powerline Symbols in bar
+let g:airline_theme='base16'
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1          " changfe cursor depending on mode
 set conceallevel=0
-
-
-" Remove diacritical signs from characters in specified range of lines.
-" Examples of characters replaced: á -> a, ç -> c, Á -> A, Ç -> C.
-" Uses substitute so changes can be confirmed.
-function! s:RemoveDiacritics(line1, line2)
-  let diacs = 'áâãàçéêíı́óôõüú'  " lowercase diacritical signs
-  let repls = 'aaaaceeiiooouu'  " corresponding replacements
-  let diacs .= toupper(diacs)
-  let repls .= toupper(repls)
-  let diaclist = split(diacs, '\zs')
-  let repllist = split(repls, '\zs')
-  let trans = {}
-  for i in range(len(diaclist))
-    let trans[diaclist[i]] = repllist[i]
-  endfor
-  execute a:line1.','.a:line2 . 's/['.diacs.']/\=trans[submatch(0)]/gIce'
-endfunction
-command! -range=% RemoveDiacritics call s:RemoveDiacritics(<line1>, <line2>)
 
 
 if !exists('g:deoplete#omni_patterns')
@@ -139,5 +121,3 @@ let g:deoplete#omni_patterns.tex =
             \ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
             \ . '|%(include%(only)?|input)\s*\{[^}]*'
             \ . ')\m'
-
-
