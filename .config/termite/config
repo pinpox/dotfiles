@@ -1,75 +1,54 @@
 [options]
-# font = Ubuntu Mono 12
-# font = Fira Code 10
-# font = Meslo LG S DZ 10
-font = monospace 8
-audible_bell = false
-
-scroll_on_output = false
-
-allow_bold = true
+font                = monospace 8
+audible_bell        = false
+scroll_on_output    = false
 scroll_on_keystroke = true
-mouse_autohide = false
-dynamic_title = true
-urgent_on_bell = true
-clickable_url = true
-scrollback_lines = 10000
-search_wrap = true
-#icon_name = terminal
-#geometry = 640x480
+allow_bold          = true
+mouse_autohide      = false
+dynamic_title       = true
+urgent_on_bell      = true
+clickable_url       = true
+scrollback_lines    = 10000
+search_wrap         = true
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
-
-# emit escape sequences for other keys modified by Control
-#modify_other_keys = false
+browser = xdg-open
 
 [colors]
-# Base16 Snazzy
-# Author: Chawye Hsu (https://github.com/h404bi) based on Hyper Snazzy Theme (https://github.com/sindresorhus/hyper-snazzy)
+background        = #1e1f29
+foreground        = #e2e4e5
+cursor            = #e2e4e5
+cursor_foreground = #1e1f29
 
-foreground          = #eff0eb
-foreground_bold     = #f1f1f0
-cursor              = #f1f1f0
-cursor_foreground   = #1e1f29
-background          = rgba(30, 31, 41)
+color0            = #1e1f29
+color8            = #4f4b58
 
-# 16 color space
+color1            = #ff5c57
+color9            = #ff5c57
 
-# Black, Gray, Silver, White
-color0  = #1e1f29
-color8  = #78787e
-color7  = #eff0eb
-color15 = #f1f1f0
+color2            = #5af78e
+color10           = #5af78e
 
-# Red
-color1  = #ff5c57
-color9  = #ff5c57
+color3            = #f3f99d
+color11           = #f3f99d
 
-# Green
-color2  = #5af78e
-color10 = #5af78e
+color4            = #57c7ff
+color12           = #57c7ff
 
-# Yellow
-color3  = #f3f99d
-color11 = #f3f99d
+color5            = #ff6ac1
+color13           = #ff6ac1
 
-# Blue
-color4  = #57c7ff
-color12 = #57c7ff
+color6            = #9aedfe
+color14           = #9aedfe
 
-# Purple
-color5  = #ff6ac1
-color13 = #ff6ac1
+color7            = #eff0eb
+color15           = #eff0eb
 
-# Teal
-color6  = #9aedfe
-color14 = #9aedfe
 
 # Extra colors
-color16 = #ff9f43
-color17 = #b2643c
-color18 = #34353e
-color19 = #4a4b53
-color20 = #a5a5a9
-color21 = #f1f1f0
+color16           = #ff9f43
+color17           = #b2643c
+color18           = #34353e
+color19           = #4a4b53
+color20           = #a5a5a9
+color21           = #f1f1f0
