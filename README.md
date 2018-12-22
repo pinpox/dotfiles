@@ -20,5 +20,6 @@ bash <(curl -Lks https://raw.githubusercontent.com/binaryplease/dotfiles/master/
 - extra/ttf-dejavu
 - community/awesome-terminal-fonts
 - extra/bdf-unifont
+- aur/siji-git
 
 
