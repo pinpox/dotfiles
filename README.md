@@ -10,11 +10,7 @@ bash <(curl -Lks https://raw.githubusercontent.com/binaryplease/dotfiles/master/
 
 
 ## Software
-### URxvt Terminal Emulator
-- community/rxvt-unicode
-- community/rxvt-unicode-terminfo
-- community/urxvt-perls
-- aur/urxvt-resize-font-git
+### Termite
 
 ### Fonts
 - extra/ttf-dejavu
