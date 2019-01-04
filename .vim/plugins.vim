@@ -32,7 +32,7 @@ Plug 'buoto/gotests-vim'                                          " Generate tes
 Plug 'chriskempson/base16-vim'                                    " Base16 colorschemes
 Plug 'christoomey/vim-tmux-navigator'                             " Seamless Tmux navigation
 Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}      " Easy ascii tables
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 Plug 'evgenyzinoviev/vim-vendetta'
 Plug 'fatih/vim-go'
 Plug 'hdima/python-syntax'
