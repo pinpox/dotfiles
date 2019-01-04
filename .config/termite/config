@@ -1,5 +1,5 @@
 [options]
-font                = monospace 8
+font                = monospace 7
 audible_bell        = false
 scroll_on_output    = false
 scroll_on_keystroke = true
