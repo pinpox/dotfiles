@@ -17,12 +17,12 @@ browser = xdg-open
 
 [colors]
 background        = #1e1f29
-foreground        = #e2e4e5
-cursor            = #e2e4e5
+foreground        = #ffffff
+cursor            = #ffffff
 cursor_foreground = #1e1f29
 
 color0            = #1e1f29
-color8            = #4f4b58
+color8            = #4f545d
 
 color1            = #ff5c57
 color9            = #ff5c57
@@ -42,8 +42,8 @@ color13           = #ff6ac1
 color6            = #9aedfe
 color14           = #9aedfe
 
-color7            = #eff0eb
-color15           = #eff0eb
+color7            = #ffffff
+color15           = #ffffff
 
 
 # Extra colors
