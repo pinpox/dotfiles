@@ -4,7 +4,7 @@
 
 # rofi command. Make sure to have "$@" as last argument
 _rofi () {
-    rofi -i -no-auto-select -matching fuzzy "$@"
+    rofi -i -no-auto-select -matching fuzzy -lines 7 -eh 1 -bw 0  -fullscreen -padding 200 "$@"
 }
 
 # image viewer to display qrcode of selected entry
