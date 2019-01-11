@@ -1,0 +1,3 @@
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/calendar; vcal %s; copiousoutput;
+application/pdf;            pdftotext -q -raw %s -; copiousoutput
