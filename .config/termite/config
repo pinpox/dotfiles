@@ -1,6 +1,8 @@
 [options]
-# font                = Tamzen 8
-font                = monospace 7
+# font                =  unifont 8
+font = misctamzen
+# font =ypnenvypn 16px
+# font                = monospace 7
 audible_bell        = false
 scroll_on_output    = false
 scroll_on_keystroke = true
