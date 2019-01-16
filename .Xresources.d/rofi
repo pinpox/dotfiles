@@ -1,6 +1,5 @@
 ! vi: ft=xdefaults
 
-
 ! Behaviour
 rofi.fuzzy: true
 rofi.modi: run,ssh,window
@@ -9,7 +8,8 @@ rofi.separator-style: solid
 
 ! Font
 rofi.dpi: 144
-rofi.font:DejaVu Sans Mono 8
+!rofi.font:DejaVu Sans Mono 8
+rofi.font:Terminus 8
 
 ! Geometry
 rofi.fullscreen: true
