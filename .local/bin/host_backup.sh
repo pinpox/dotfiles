@@ -41,7 +41,7 @@ pacman -Qe > /home/binaryplease/installed_packages_list.txt
 print_colored "Creating backup..." $COLOR_GREEN
 borg create -v --progress --stats \
 	--compression lz4 \
-	"$REPOSITORY::'{hostname}-{now:%Y-%m-%d}'" \
+	"$REPOSITORY::{hostname}-{now:%Y-%m-%d}" \
 		/etc \
 		/home \
 		/root \
@@ -54,6 +54,9 @@ borg create -v --progress --stats \
 	print_colored "Deleting old backups..." $COLOR_GREEN
 	borg prune -v "$REPOSITORY" --prefix '{hostname}-' --keep-daily=3 --keep-weekly=2 --keep-monthly=6
 
-	print_colored "Deleting package list..." $COLOR_GREEN
-	rm -rf /home/binaryplease/installed_packages_list.txt
+print_colored "Deleting old backups..." $COLOR_GREEN
+borg prune -v "$REPOSITORY" --prefix '{hostname}-' --keep-daily=3 --keep-weekly=2 --keep-monthly=6
+
+print_colored "Deleting package list..." $COLOR_GREEN
+rm -rf /home/binaryplease/installed_packages_list.txt
 
