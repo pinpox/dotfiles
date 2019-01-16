@@ -4,7 +4,7 @@
 include "/home/binaryplease/.gtkrc-2.0.mine"
 gtk-theme-name="oomox-pablo-arc2"
 gtk-icon-theme-name="Paper-Mono-Dark"
-gtk-font-name="Monospace 7"
+gtk-font-name="Terminus 8"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH

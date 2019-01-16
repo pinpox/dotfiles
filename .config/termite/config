@@ -1,8 +1,6 @@
 [options]
-# font                =  unifont 8
-font = misctamzen
-# font =ypnenvypn 16px
-# font                = monospace 7
+# font = monospace 7
+font   = xos4 Terminus 15px
 audible_bell        = false
 scroll_on_output    = false
 scroll_on_keystroke = true
@@ -46,7 +44,6 @@ color14           = #9aedfe
 
 color7            = #ffffff
 color15           = #ffffff
-
 
 # Extra colors
 color16           = #ff9f43

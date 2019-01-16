@@ -1,11 +1,11 @@
 [colors]
-background = ${xrdb:color0:#222}
+background     = ${xrdb:color0:#222}
 background-alt = ${xrdb:color8:#222}
-foreground = ${xrdb:color7:#222}
+foreground     = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color8:#222}
-primary = ${xrdb:color1:#222}
-secondary = ${xrdb:color1:#222}
-alert = ${xrdb:color1:#222}
+primary        = ${xrdb:color1:#222}
+secondary      = ${xrdb:color1:#222}
+alert          = ${xrdb:color1:#222}
 
 color-line-1 = ${xrdb:color1:#222}
 color-line-2 = ${xrdb:color1:#222}
@@ -21,10 +21,7 @@ bottom = true
 monitor = ${env:MONITOR}
 width = 100%
 height = 22
-;offset-x = 1%
-;offset-y = 1%
 radius = 0
-fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -35,14 +32,13 @@ line-color = ${colors.color-line-1}
 border-size = 0
 border-color = #00000000
 
-
 padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Ubuntu Mono:pixelsize=10"
+font-0 = "Terminus:pixelsize=8"
 font-2 = "Wuncon siji:pixelsize=10;1"
 font-1 = "font awesome"
 
@@ -52,21 +48,6 @@ modules-right = pkg weather filesystem backlight-acpi volume xkeyboard memory cp
 
 tray-position = right
 tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -77,9 +58,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
 label-layout = "%name%"
-; label-layout = "%layout%"
 label-layout-underline = ${colors.secondary}
-
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -87,37 +66,18 @@ label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
-format-mounted-underline =  ${colors.color-line-1}
-type = internal/fs
 interval = 25
-
-format-prefix = " "
 mount-0 = /
+type = internal/fs
+
+format-mounted-underline =  ${colors.color-line-1}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
 
 label-mounted =  %mountpoint%%{F-}: %percentage_used%% [%free%]
-format-prefix-foreground = ${colors.foreground-alt}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %name%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %name%
-label-occupied-padding = 2
-
-label-urgent = %name%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-; label-empty = %name%
-label-empty =
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -134,13 +94,13 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
@@ -150,21 +110,8 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
 
 [module/xbacklight]
 format-underline = ${colors.color-line-2}
@@ -174,13 +121,6 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label>
 label = %percentage%%
-
-; Only applies if <ramp> is used
-;ramp-0 = 🌕
-;ramp-1 = 🌔
-;ramp-2 = 🌓
-;ramp-3 = 🌒
-;ramp-4 = 🌑
 
 bar-width = 10
 bar-indicator = |
@@ -225,10 +165,10 @@ format-connected-underline = #9f78e1
 label-connected = %signal%% %essid%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
+; format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -286,9 +226,10 @@ format-prefix-underline = ${colors.secondary}
 
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = " "
+
+; label-muted = " "
 label-muted-foreground = #66
 
-; Only applies if <ramp-volume> is used
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -317,6 +258,7 @@ ramp-capacity-foreground = ${colors.foreground-alt}
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
+
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
@@ -407,4 +349,3 @@ exec = .config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 ;f vim:ft=dosini
-
