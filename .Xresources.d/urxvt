@@ -21,8 +21,6 @@ URxvt*scrollTtyOutput:        false
 URxvt*secondaryScreen:        1
 URxvt*secondaryScroll:        0
 
-! Appearance
-Xft.dpi:                     144
 !! regular
 URxvt*.font: \
         xft:DejaVu Sans Mono:size=8, \
