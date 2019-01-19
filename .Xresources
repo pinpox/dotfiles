@@ -2,7 +2,7 @@
 
 
 ! General settings
-Xft*dpi:                141
+Xft*dpi:                125
 Xft*antialias:          true
 Xft*hinting:            full
 
