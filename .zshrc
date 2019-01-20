@@ -64,3 +64,4 @@ export GPG_TTY=$(tty)
 
 # prompt_symbol='❯'
 # PROMPT='%(?.%F{magenta}.%F{red})${prompt_symbol}%f '
+SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh; export SSH_AUTH_SOCK;
