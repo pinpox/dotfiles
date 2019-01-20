@@ -3,10 +3,12 @@
 set $mod Mod4
 bindsym $mod+Shift+s sticky toggle
 
-font pango:Ubuntu Mono, FontAwesome 8
+font pango:Terminus 14px
+# font pango:Ubuntu Mono, FontAwesome 8
 for_window [window_role="pop-up"] floating enable
 new_window pixel 2
 new_float pixel 2
+
 
 exec        srandrd display_handler
 exec_always --no-startup-id xbindkeys -f .xbindkeys_config/speed_c/pablo
@@ -20,7 +22,7 @@ bindsym XF86AudioPrev     exec playerctl previous
 bindsym XF86AudioNext     exec playerctl next
 bindsym XF86AudioStop     exec playerctl stop
 bindsym XF86AudioPlay     exec playerctl play-pause
-bindsym --release $mod+n  exec xdotool type --clearmodifiers --window $(xdotool getwindowfocus) '¯\_(ツ)_/¯'
+bindsym --release $mod+n  exec xdotool type --delay 80 --clearmodifiers --window $(xdotool getwindowfocus) '¯\_(ツ)_/¯'
 bindsym $mod+p            exec rofi -show run -lines 7 -eh 1 -bw 0  -fullscreen -padding 200
 bindsym $mod+Shift+p      exec rofi-pass -show combi -lines 7 -eh 3 -bw 0 -matching fuzzy
 bindsym $mod+Shift+x      exec ~/.local/bin/lock
