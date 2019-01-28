@@ -71,10 +71,11 @@ mount-0 = /
 type = internal/fs
 
 format-mounted-underline =  ${colors.color-line-1}
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
 
-label-mounted =  %mountpoint%%{F-}: %percentage_used%% [%free%]
+format-mounted-prefix-foreground = ${colors.foreground-alt}
+format-mounted-prefix = " "
+
+label-mounted = %mountpoint%%{F-}: %percentage_used%% [%free%]
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -221,15 +222,17 @@ label-volume-foreground = ${root.foreground}
 
 
 ;format-volume-prefix = %ramp-volume%
-format-prefix-foreground = ${colors.foreground-alt}
+;
+format-volume-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = " "
+label-muted = "  000"
 
 ; label-muted = " "
 label-muted-foreground = #66
 
+ramp-volume-foreground =  ${colors.foreground-alt}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
