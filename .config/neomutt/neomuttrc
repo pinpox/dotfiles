@@ -18,6 +18,7 @@ set pgp_default_key = "D03B218CAE771F77D7F920D9823A6154426408D3"
 source ~/.config/neomutt/base16.muttrc
 
 ##### Keybindings
+macro index,pager <F1> "<sidebar-toggle-visible><enter>"
 macro index,pager d "<save-message><enter>"
 set delete=yes
 unset confirmappend                                              # don't ask, just do!
