@@ -44,7 +44,7 @@ color error       color01  color00
 color message     color04  color00  # informational messages
 color search      color08  color03
 color status      color20  color19
-color indicator   color21  color19  # inverse, brighter
+color indicator   color00  color03  # inverse, brighter
 
 
 # Message Index ----------------------------------------------------------------
