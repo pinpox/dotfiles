@@ -29,7 +29,7 @@ function setup_dotfiles() {
 	cd ~
 	git clone --bare $GIT_REPO "$HOME/$CONF_DIR_NAME"
 	function config {
-		/usr/bin/git --git-dir="$HOME/$CONF_DIR_NAME/" --work-tree="$HOME" "$@"
+		git --git-dir="$HOME/$CONF_DIR_NAME/" --work-tree="$HOME" "$@"
 	}
 	if grep -Fxq ".gitignore" $CONF_DIR_NAME
 	then
