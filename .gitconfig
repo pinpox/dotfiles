@@ -47,5 +47,8 @@
 
 [diff]
     algorithm = patience
+	tool = meld
 [gpg]
 	program = gpg
+[difftool]
+	prompt = false
