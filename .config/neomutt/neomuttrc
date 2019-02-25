@@ -3,10 +3,12 @@
 ##### Accounts
 folder-hook 'acc1_folder' 'source ~/.config/neomutt/acc1' # Read configuratoin of first account when switching to folder
 folder-hook 'acc2_folder' 'source ~/.config/neomutt/acc2' # Read configuratoin of second account when switching to folder
+folder-hook 'acc3_folder' 'source ~/.config/neomutt/acc3' # Read configuratoin of thrid account when switching to folder
 
 source ~/.config/neomutt/acc1 # Default account
-macro index <f2> '<sync-mailbox><enter-command>source ~/.config/neomutt/acc1<enter><change-folder>!<enter>' 
+macro index <f2> '<sync-mailbox><enter-command>source ~/.config/neomutt/acc1<enter><change-folder>!<enter>'
 macro index <f3> '<sync-mailbox><enter-command>source ~/.config/neomutt/acc2<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.config/neomutt/acc3<enter><change-folder>!<enter>'
 
 macro index,pager <F5> ":source ~/.config/neomutt/neomuttrc\n"              "Reload the muttrc"
 bind index G imap-fetch-mail
@@ -15,7 +17,7 @@ bind index G imap-fetch-mail
 set pgp_default_key = "D03B218CAE771F77D7F920D9823A6154426408D3"
 
 ##### Colors
-source ~/.config/neomutt/base16.muttrc
+source ~/.config/neomutt/colors.muttrc
 
 ##### Keybindings
 macro index,pager <F1> "<sidebar-toggle-visible><enter>"
