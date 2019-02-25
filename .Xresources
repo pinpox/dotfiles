@@ -9,5 +9,5 @@ Xft*hinting:            full
 #include ".Xresources.d/colors"
 #include ".Xresources.d/urxvt"
 #include ".Xresources.d/rofi"
-
+#include ".Xresources.d/st"
 
