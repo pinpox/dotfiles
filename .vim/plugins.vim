@@ -70,3 +70,7 @@ Plug 'zchee/deoplete-clang'
 " Plug 'vim-pandoc/vim-pandoc-syntax'
 " Plug 'vim-pandoc/vim-rmarkdown'
 
+" Plug 'markonm/traces.vim'
+Plug 'tpope/vim-surround'
+Plug 'rhysd/committia.vim'
+Plug 'tpope/vim-vinegar'
