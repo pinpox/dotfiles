@@ -1,5 +1,6 @@
+sftp://povelleiro@koblenzserver/ koblenzserver
 sftp://himbeere/home/binaryplease himbeere
-smb://192.168.3.132/committance_market/
+smb://192.168.3.132/committance_market/ committance NAS
 sftp://zitrone/home/binaryplease zitrone
 sftp://kartoffel/home/binaryplease kartoffel
 sftp://root@85.214.140.27/

@@ -1,6 +1,24 @@
 [options]
-# font = monospace 7
-font   = xos4 Terminus 14px
+# Outline fonts
+# font                = monospace 7
+
+# Bitmap fonts
+# font                = Tamzen 8
+# font                = dina 8
+# font                = gohu gohufont 8
+# font                = unifont 8
+
+font                = ProggySmallTT 12
+# font                = ProggyCleanCP
+# font                = ProggyCleanSZCP
+# font                = ProggyCleanTT
+# font                = ProggySquareTT
+# font                = ProggyTinyTT
+# font                = xos4 Terminus 12px
+
+# Custom fonts
+# font = Bitter Mono 8
+# font = mausi 8
 audible_bell        = false
 scroll_on_output    = false
 scroll_on_keystroke = true
@@ -45,6 +63,7 @@ color14           = #9aedfe
 color7            = #ffffff
 color15           = #ffffff
 
+
 # Extra colors
 color16           = #ff9f43
 color17           = #b2643c
@@ -52,5 +71,3 @@ color18           = #34353e
 color19           = #4a4b53
 color20           = #a5a5a9
 color21           = #f1f1f0
-
-
