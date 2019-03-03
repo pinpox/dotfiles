@@ -8,7 +8,7 @@ set signature="~/.config/neomutt/acc2_signature"
 
 # Credentials and security
 set imap_user="pablo.ovelleiro@committance.com"
-set imap_pass="`pass pablo.ovelleiro@committance.com`"
+set imap_pass="`pass committance/pablo.ovelleiro@committance.com`"
 set smtp_url = "smtp://$imap_user@smtp.1und1.de:587/"
 set smtp_pass = $imap_pass
 set ssl_force_tls = yes
