@@ -92,6 +92,14 @@ let g:arduino_args = '--verbose-upload'
 let g:livedown_browser = "chromium"                             " the browser to use for preview
 let g:task_default_prompt = [ 'project',  'description', 'due'] " Taskwarrior default fields
 
+" indent lines and reselect visual group
+vnoremap < <gv
+vnoremap > >gv
+
+" move lines up and down
+vnoremap <C-k> :m-2<CR>gv
+vnoremap <C-j> :m '>+<CR>gv
+
 " Switch substitutions
 source ~/.vim/switch_subs.vim
 
