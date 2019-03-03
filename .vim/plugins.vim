@@ -72,5 +72,11 @@ Plug 'zchee/deoplete-clang'
 
 " Plug 'markonm/traces.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-speeddating'                                      " CTRL-A/CTRL-X to increment dates, times, and more
 Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-vinegar'
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash install.sh',
+"     \ }
+Plug 'Yggdroot/indentLine'
