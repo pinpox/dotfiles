@@ -50,10 +50,9 @@ set mailcap_path = "~/.config/neomutt/mailcap
 set implicit_autoview
 auto_view text/html
 auto_view text/calendar
+alternative_order text/plain text/enriched text/html     # save html for last
 
 set autoedit
-#alternative_order text/plain text/enriched text/html
-#alternative_order text/plain text/html
 
 ## Set up preview pane for messages
 # set pager_index_lines		= 10	# number of index lines to show
