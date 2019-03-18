@@ -77,4 +77,6 @@ set sort				= reverse-date-received							# Sort with the newest at the top
 set uncollapse_jump		= yes											# Don't jump to next unread message when a thread is collapsed
 #color progress white red
 
+set wait_key = no
 source ./sidebar.muttrc
+
