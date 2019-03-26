@@ -5,7 +5,7 @@ alias vim="nvim"
 alias "rubocop --version"="echo 0.29.1"
 alias "git igpush"="git commit -m\"ignore\" && git push"
 alias y="yay"
-alias paste=" curl -F c=@- https://ptpb.pw/"
+# alias paste="curl -F 'f:1=<-' ix.io"
 alias snvim="sudo -E nvim"
 alias weather='curl -4 http://wttr.in/Koeln'
 alias qr_gen="qrencode -t ansi -o-"
