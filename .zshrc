@@ -76,3 +76,6 @@ PURE_PROMPT_SYMBOL='✱'
 # PURE_PROMPT_SYMBOL='➫'
 # PURE_PROMPT_SYMBOL='➸'
 # PURE_PROMPT_SYMBOL='⟫'
+
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+compdef config="git"
