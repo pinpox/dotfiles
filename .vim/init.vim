@@ -126,3 +126,11 @@ let g:deoplete#omni_patterns.tex =
             \ . ')\m'
 
 
+
+" let g:ale_linters ={
+"       \   'haskell': ['hlint', 'hdevtools', 'hfmt'],
+"       \}
+"
+autocmd BufWrite *.hs :Autoformat
+ "Don't automatically indent on save, since vim's autoindent for haskell is buggy
+autocmd FileType haskell let b:autoformat_autoindent=0
