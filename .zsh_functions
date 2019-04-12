@@ -1,4 +1,6 @@
 # vim: set ft=sh
+
+# Extract archives
 function extract {
 	if [ -z "$1" ]; then
 		# display usage if no parameters given
@@ -31,7 +33,42 @@ function extract {
 		fi
 	}
 
+
+# Create archive
 mktar() { name="${${1:t}:r}"; tar -I pxz -cf "$name".tar.xz "$@"; }
 
+# Transfer files
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+
+# Pastebin stuff
+# Examples:
+#     paste hello.txt              # paste file (name/ext will be set).
+#     echo Hello world. | paste    # read from STDIN (won't set name/ext).
+#     paste -n 1 self_destruct.txt # paste will be deleted after one read.
+#     paste -i ID hello.txt        # replace ID, if you have permission.
+#     paste -d ID
+paste() {
+    local opts
+    local OPTIND
+    [ -f "$HOME/.netrc" ] && opts='-n'
+    while getopts ":hd:i:n:" x; do
+        case $x in
+            h) echo "paste [-d ID] [-i ID] [-n N] [opts]"; return;;
+            d) $echo curl $opts -X DELETE ix.io/$OPTARG; return;;
+            i) opts="$opts -X PUT"; local id="$OPTARG";;
+            n) opts="$opts -F read:1=$OPTARG";;
+        esac
+    done
+    shift $(($OPTIND - 1))
+    [ -t 0 ] && {
+        local filename="$1"
+        shift
+        [ "$filename" ] && {
+            curl $opts -F f:1=@"$filename" $* ix.io/$id
+            return
+        }
+        echo "^C to cancel, ^D to send."
+    }
+    curl $opts -F f:1='<-' $* ix.io/$id
+}
