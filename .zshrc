@@ -76,6 +76,6 @@ PURE_PROMPT_SYMBOL='✱'
 # PURE_PROMPT_SYMBOL='➫'
 # PURE_PROMPT_SYMBOL='➸'
 # PURE_PROMPT_SYMBOL='⟫'
-#
-# Enable vim key-mode
-# bindkey -v
+
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+compdef config="git"

@@ -48,7 +48,11 @@ let g:go_auto_type_info = 1 "Show Go type info of variables
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null "autoindent xml correctly
 
 au BufRead,BufNewFile *.md setlocal textwidth=80 " Wrap markdown files to 80 chars per line
+
+let g:ale_sign_column_always = 1    "Keep the sign gutter open
+let g:airline#extensions#ale#enabled = 1
 " autocmd! BufWritePost * Neomake " run neomake on file save
+" call neomake#configure#automake('nrwi', 500)
 
 autocmd Filetype rmd map <F8> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
@@ -91,6 +95,14 @@ let g:arduino_dir = '/usr/share/arduino'
 let g:arduino_args = '--verbose-upload'
 let g:livedown_browser = "chromium"                             " the browser to use for preview
 let g:task_default_prompt = [ 'project',  'description', 'due'] " Taskwarrior default fields
+
+" indent lines and reselect visual group
+vnoremap < <gv
+vnoremap > >gv
+
+" move lines up and down
+vnoremap <C-k> :m-2<CR>gv
+vnoremap <C-j> :m '>+<CR>gv
 
 " Switch substitutions
 source ~/.vim/switch_subs.vim
