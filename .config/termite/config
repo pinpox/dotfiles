@@ -21,7 +21,7 @@ foreground        = #ffffff
 cursor            = #ffffff
 cursor_foreground = #1e1f29
 
-color0            = #1e1f29
+color0            = #393c51
 color8            = #4f545d
 
 color1            = #ff5c57
