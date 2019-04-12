@@ -76,3 +76,6 @@ PURE_PROMPT_SYMBOL='✱'
 # PURE_PROMPT_SYMBOL='➫'
 # PURE_PROMPT_SYMBOL='➸'
 # PURE_PROMPT_SYMBOL='⟫'
+#
+# Enable vim key-mode
+# bindkey -v

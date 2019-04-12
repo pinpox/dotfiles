@@ -74,3 +74,8 @@ Plug 'zchee/deoplete-clang'
 Plug 'tpope/vim-surround'
 Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-vinegar'
+
+
+Plug 'liuchengxu/space-vim-dark'
+
+Plug 'neovimhaskell/haskell-vim'
