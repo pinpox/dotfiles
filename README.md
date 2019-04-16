@@ -10,7 +10,9 @@ bash <(curl -Lks https://raw.githubusercontent.com/binaryplease/dotfiles/master/
 
 
 ## Software
-### Termite
+- Termite
+- Neovim
+- Htop
 
 ### Fonts
 - extra/ttf-dejavu
