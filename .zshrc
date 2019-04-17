@@ -24,6 +24,7 @@ export GOPATH=~/.go
 # Keep .local/bin befor .go/bin to set correct antibody location
 export PATH="$PATH:\
 .local/bin:\
+/home/binaryplease/.go/bin/:\
 /usr/bin/core_perl:\
 /usr/bin/site_perl:\
 /usr/bin/vendor_perl:\
@@ -79,3 +80,8 @@ PURE_PROMPT_SYMBOL='✱'
 
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 compdef config="git"
+
+# Colors
+# wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors
+eval $(dircolors -b $HOME/.dircolors) 
+# . $HOME/.dircolors
