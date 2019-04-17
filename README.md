@@ -9,10 +9,24 @@ bash <(curl -Lks https://raw.githubusercontent.com/binaryplease/dotfiles/master/
 ```
 
 
-## Software
-- Termite
-- Neovim
-- Htop
+### Software
+- zsh
+  - antibody
+- asciinema
+- dunst
+- gtk
+- neomutt/mutt
+- gnupg
+  - pass
+  - rofi-pass
+- X
+- i3 (i3-gaps)
+  - Rofi
+  - Polybar
+- tmux
+- termite
+- neovim
+- htop
 
 ### Fonts
 - extra/ttf-dejavu
@@ -20,4 +34,9 @@ bash <(curl -Lks https://raw.githubusercontent.com/binaryplease/dotfiles/master/
 - extra/bdf-unifont
 - aur/siji-git
 
+### Scripts
+- backup (borg)
+- screen locker
 
+### Other
+- dircolors
