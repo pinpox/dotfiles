@@ -44,7 +44,7 @@ syntax enable                  " enable syntax highlighting
 
 " MISC:
 "
-let g:go_auto_type_info = 1 "Show Go type info of variables
+" let g:go_auto_type_info = 1 "Show Go type info of variables
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null "autoindent xml correctly
 
 au BufRead,BufNewFile *.md setlocal textwidth=80 " Wrap markdown files to 80 chars per line
