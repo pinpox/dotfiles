@@ -48,8 +48,10 @@ Plug 'ludovicchabant/vim-gutentags'                             " Autognerate Ta
 Plug 'majutsushi/tagbar'
 Plug 'mhartington/oceanic-next'
 Plug 'michaeljsmith/vim-indent-object'                            " Indention based Textobject (dai, cai...)
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+" Plug 'binaryplease/gruvbox'
 Plug 'ntpeters/vim-better-whitespace'                             " Hightlight all trailing whitespace in red
+Plug 'godlygeek/tabular'                                          " The tabular plugin must come before vim-markdown
 Plug 'plasticboy/vim-markdown'
 Plug 'shime/vim-livedown'
 Plug 'stevearc/vim-arduino'
