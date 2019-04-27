@@ -12,7 +12,7 @@ new_float pixel 2
 
 exec        srandrd display_handler
 exec_always --no-startup-id xbindkeys -f .xbindkeys_config/speed_c/pablo
-exec_always setxkbmap -layout us,us -variant colemak, -option grp:alt_shift_toggle -option "caps:escape"
+exec_always setxkbmap us -variant colemak, -option "caps:escape"
 exec_always nitrogen --restore
 exec        nm-applet
 exec_always ~/.screenlayout/default.sh
