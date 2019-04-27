@@ -10,4 +10,5 @@ Xft*hinting:            full
 #include ".Xresources.d/urxvt"
 #include ".Xresources.d/rofi"
 #include ".Xresources.d/st"
+#include ".Xresources.d/emacs"
 
