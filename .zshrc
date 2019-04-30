@@ -1,3 +1,4 @@
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 # Prevents grep options deprecation message
 unset GREP_OPTIONS
 
@@ -85,3 +86,4 @@ compdef config="git"
 # wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors
 eval $(dircolors -b $HOME/.dircolors) 
 # . $HOME/.dircolors
+
