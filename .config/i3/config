@@ -12,24 +12,24 @@ new_float pixel 2
 
 exec        srandrd display_handler
 exec_always --no-startup-id xbindkeys -f .xbindkeys_config/speed_c/pablo
-exec_always setxkbmap us -variant colemak, -option "caps:escape"
+exec_always setxkbmap us -variant colemak -option "caps:escape"
 exec_always nitrogen --restore
 exec        nm-applet
 exec_always ~/.screenlayout/default.sh
 exec_always ~/.local/bin/launch_polybar
 
-bindsym XF86AudioPrev     exec playerctl previous
-bindsym XF86AudioNext     exec playerctl next
-bindsym XF86AudioStop     exec playerctl stop
-bindsym XF86AudioPlay     exec playerctl play-pause
-bindsym --release $mod+n  exec xdotool type --delay 80 --clearmodifiers --window $(xdotool getwindowfocus) '¯\_(ツ)_/¯'
-bindsym $mod+p            exec rofi -show run -lines 7 -eh 1 -bw 0  -fullscreen -padding 200
-bindsym $mod+Shift+p      exec rofi-pass -show combi -lines 7 -eh 3 -bw 0 -matching fuzzy
-bindsym $mod+Shift+x      exec ~/.local/bin/lock
-bindsym $mod+Shift+Escape exec xkill
-# bindsym --release Print   exec import png:- | xclip -selection c -t image/png
-bindsym --release Print   exec ~/.local/bin/shadow-scrot.sh
-bindcode 156              exec --no-startup-id " termite -e hollywood"
+bindsym XF86AudioPrev         exec playerctl previous
+bindsym XF86AudioNext         exec playerctl next
+bindsym XF86AudioStop         exec playerctl stop
+bindsym XF86AudioPlay         exec playerctl play-pause
+bindsym --release $mod+n      exec xdotool type --delay 80 --clearmodifiers --window $(xdotool getwindowfocus) '¯\_(ツ)_/¯'
+bindsym $mod+p                exec rofi -show run -lines 7 -eh 1 -bw 0  -fullscreen -padding 200
+bindsym $mod+Shift+p          exec rofi-pass -show combi -lines 7 -eh 3 -bw 0 -matching fuzzy
+bindsym $mod+Shift+x          exec ~/.local/bin/lock
+bindsym $mod+Shift+Escape     exec xkill
+bindsym --release Shift+Print exec import png:- | xclip -selection c -t image/png
+bindsym --release Print       exec ~/.local/bin/shadow-scrot.sh
+bindcode 156                  exec --no-startup-id " termite -e hollywood"
 
 # Make the currently focused window a scratchpad
 bindsym $mod+minus move scratchpad
@@ -135,20 +135,20 @@ mode "resize" {
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
 
-	bindsym j         resize shrink width  10 px or 10 ppt
-		bindsym k         resize grow   height 10 px or 10 ppt
-		bindsym l         resize shrink height 10 px or 10 ppt
-		bindsym semicolon resize grow   width  10 px or 10 ppt
+ bindsym j         resize shrink width  10 px or 10 ppt
+ bindsym k         resize grow   height 10 px or 10 ppt
+ bindsym l         resize shrink height 10 px or 10 ppt
+ bindsym semicolon resize grow   width  10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-		bindsym Left      resize shrink width  10 px or 10 ppt
-		bindsym Down      resize grow   height 10 px or 10 ppt
-		bindsym Up        resize shrink height 10 px or 10 ppt
-		bindsym Right     resize grow   width  10 px or 10 ppt
+ bindsym Left      resize shrink width  10 px or 10 ppt
+ bindsym Down      resize grow   height 10 px or 10 ppt
+ bindsym Up        resize shrink height 10 px or 10 ppt
+ bindsym Right     resize grow   width  10 px or 10 ppt
 
 # back to normal: Enter or Escape
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
+ bindsym Return mode "default"
+ bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -199,4 +199,3 @@ client.urgent           $red1   $red    $magenta $red
 #         urgent_workspace   $red $red $white
 #     }
 # }
-
