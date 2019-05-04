@@ -30,6 +30,7 @@ bindsym $mod+Shift+Escape     exec xkill
 bindsym --release Shift+Print exec import png:- | xclip -selection c -t image/png
 bindsym --release Print       exec ~/.local/bin/shadow-scrot.sh
 bindcode 156                  exec --no-startup-id " termite -e hollywood"
+bindsym $mod+space            exec emacsclient -nc
 
 # Make the currently focused window a scratchpad
 bindsym $mod+minus move scratchpad
@@ -88,7 +89,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Control+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
