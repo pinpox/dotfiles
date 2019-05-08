@@ -15,7 +15,7 @@ st.borderpx:          10
 st.cursorshape:       2
 ! thickness of underline and bar cursors
 st.cursorthickness:   2
-! 0: normal blinking, 1: leave cursor border and blink with cursor's background
+! 0: normal blinking, 1: leave cursor border and blink with cursor background
 st.cursorblinkstyle:  0
 ! 0: cursor blinks with a constant interval; 1: blinking cycle resets on key input
 st.cursorblinkontype: 1
