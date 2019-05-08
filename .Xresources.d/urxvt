@@ -38,6 +38,9 @@ URxvt*.italicfont: \
 !URxvt*lineSpace:             1
 
 
+URxvt.font:      -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+URxvt.bold.font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+
 URxvt.internalBorder:         10
 URxvt.scrollBar:              False
 
