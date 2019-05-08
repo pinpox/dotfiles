@@ -29,7 +29,7 @@ bindsym $mod+Shift+x          exec ~/.local/bin/lock
 bindsym $mod+Shift+Escape     exec xkill
 bindsym --release Shift+Print exec import png:- | xclip -selection c -t image/png
 bindsym --release Print       exec ~/.local/bin/shadow-scrot.sh
-bindcode 156                  exec --no-startup-id " termite -e hollywood"
+bindcode 156                  exec --no-startup-id " urxvt -e hollywood"
 bindsym $mod+space            exec emacsclient -nc
 
 # Make the currently focused window a scratchpad
@@ -40,8 +40,8 @@ bindsym $mod+plus scratchpad show
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec  termite -e nvim
+bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec  urxvt -e nvim
 
 # kill focused window
 bindsym $mod+Shift+q kill
