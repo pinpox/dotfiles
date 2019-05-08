@@ -23,14 +23,17 @@ URxvt*secondaryScroll:        0
 
 !! regular
 URxvt*.font: \
+        -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*, \
         xft:DejaVu Sans Mono:size=8, \
         xft:Unifont:size=8
 !! bold
 URxvt*.boldfont: \
+        -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*, \
         xft:DejaVu Sans Mono:size=8:style=bold, \
         xft:Unifont:size=8:style=bold
 !! italic
 URxvt*.italicfont: \
+        -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*, \
         xft:DejaVu Sans Mono:size=8:style=italic, \
         xft:Unifont:size=8:style=italic
 
@@ -38,8 +41,8 @@ URxvt*.italicfont: \
 !URxvt*lineSpace:             1
 
 
-URxvt.font:      -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
-URxvt.bold.font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
+! URxvt.font:
+! URxvt.bold.font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-*-*
 
 URxvt.internalBorder:         10
 URxvt.scrollBar:              False
