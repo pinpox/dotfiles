@@ -2,8 +2,5 @@
 folders = mailbox/INBOX committance/INBOX
 
 # rules
-committance/INBOX = 'tag:archived':committance/Archives 'tag:deleted':committance/Trash
+committance/INBOX = 'tag:archived':committance/Archive 'tag:deleted':committance/Trash
 mailbox/INBOX = 'tag:archived':mailbox/Archive 'tag:deleted':mailbox/Trash
-
-[FolderNameFilter]
-folder_transforms = Junk:spam Drafts:draft Sent:sent Archive:archived Archives:archived
