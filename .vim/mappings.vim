@@ -9,7 +9,7 @@ noremap Q @q "use Q for playing q macro
 nnoremap <BS> :Switch<CR>
 nnoremap <F8> :TagbarToggle<CR>
 
-let mapleader=","
+let mapleader="\<Space>"
 " open a file using fzf
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
