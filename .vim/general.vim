@@ -1,5 +1,4 @@
 filetype plugin indent on
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set hidden                     " Buffer becomes hidden when it is abandoned but is not unloaded
 set autochdir                  " Automatically change the working dir to the one of the file
 set autoindent                 " always set autoindenting on
@@ -39,11 +38,6 @@ syntax enable                  " enable syntax highlighting
 " let g:go_auto_type_info = 1 "Show Go type info of variables
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null "autoindent xml correctly
 au BufRead,BufNewFile *.md setlocal textwidth=80 " Wrap markdown files to 80 chars per line
-let g:ale_sign_column_always = 1    "Keep the sign gutter open
-let g:airline#extensions#ale#enabled = 1
-" autocmd! BufWritePost * Neomake " run neomake on file save
-" call neomake#configure#automake('nrwi', 500)
-" Default file type for .tex files
 let g:tex_flavor = "latex"
 
 " Cursor to last know position

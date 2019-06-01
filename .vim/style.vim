@@ -5,12 +5,7 @@ set list
 "
 " hi Normal ctermfg=252 ctermbg=none
 " let base16colorspace=256
-colorscheme noctu
 
-set background=dark " for the dark version
-let g:airline_powerline_fonts = 0            " Powerline Symbols in bar
-let g:airline_theme='base16'
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1          " changfe cursor depending on mode
 set conceallevel=0
 " Make comments italic
 highlight Comment cterm=italic
@@ -29,6 +24,14 @@ if (empty($TMUX))
   endif
 endif
 syntax on
-colorscheme onedark
 
+" let g:onedark_terminal_italics = 1
+set background=dark " for the dark version
+colorscheme one
+" colorscheme one
 
+" Airline
+let g:airline#extensions#ale#enabled = 1
+let g:airline_powerline_fonts = 0            " Powerline Symbols in bar
+" let g:airline_theme='base16'
+let g:airline_theme='one'

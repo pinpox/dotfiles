@@ -33,7 +33,7 @@ Plug 'chriskempson/base16-vim'                                    " Base16 color
 Plug 'mhartington/oceanic-next'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'liuchengxu/space-vim-theme'
-Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'                                          " Lean & mean status/tabline
 Plug 'lilydjwg/colorizer'                                         " Colorize color definitions
@@ -41,6 +41,7 @@ Plug 'ap/vim-buftabline'                                          " Forget Vim t
 Plug 'timakro/vim-searchant'                                      " Better highlighting of search
 
 " Syntax and language specific
+"TODO try out: sheerun/vim-polyglot " can replace python, i3, hastkell, vim-go
 Plug 'OrangeT/vim-csharp', {'for': 'cs'}                          " Csharp syntax
 Plug 'PotatoesMaster/i3-vim-syntax', {'for': 'i3'}                " I3-config syntax
 Plug 'hdima/python-syntax'
@@ -50,6 +51,7 @@ Plug 'fatih/vim-go'
 Plug 'buoto/gotests-vim'                                          " Generate test for Go function in current line
 Plug 'justinmk/vim-syntax-extra'
 Plug 'stevearc/vim-arduino'
+Plug 'pearofducks/ansible-vim'
 
 " Completion and snippets
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
@@ -134,6 +136,12 @@ let g:task_default_prompt = [ 'project',  'description', 'due']
 " let g:ale_linters ={
 " \   'haskell': ['hlint', 'hdevtools', 'hfmt'],
 " \}
+let g:ale_sign_column_always = 1    "Keep the sign gutter open
+
+" Neomake
+" autocmd! BufWritePost * Neomake " run neomake on file save
+" call neomake#configure#automake('nrwi', 500)
+" Default file type for .tex files
 
 " Fzf, show file preview
 let g:fzf_files_options = '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
