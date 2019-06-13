@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 	lines: 3;
 /*	columns: 1;*/
-	font: "Terminus 8";
+	font: "Roboto Mono 7";
 /*	bw: 1;*/
 /*	location: 0;*/
 	padding: 400;
@@ -44,7 +44,7 @@ configuration {
 	hide-scrollbar: true;
 	fullscreen: true;
 /*	fake-transparency: false;*/
-	dpi: 144;
+	dpi: 125.35;
 /*	threads: 0;*/
 /*	scrollbar-width: 8;*/
 /*	scroll-method: 0;*/
@@ -52,11 +52,28 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
+
+/* dracula */
+/* ! Property Name     BG       Border   Separator */
+color-window:          "#282A36, #282A36, #ea51b2";
+
+/* ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG */
+color-normal:         "#282A36, #e9e9f4, #282A36, #282A36, #f7f7fb";
+color-active:         "#282A36, #62d6e8, #282A36, #282A36, #62d6e8";
+color-urgent:         "#282A36, #ea51b2, #282A36, #282A36, #ea51b2";
+
+
 /*            BG        FG       BG-alt   Head-BG  Head-FG*/
-color-window: "#1d2021, #3c3836, #d79921";
-color-normal: "#1d2021, #d5c4a1, #1d2021, #3c3836, #fbf1c7";
-color-active: "#3c3836, #83a598, #3c3836, #3c3836, #83a598";
-color-urgent: "#3c3836, #fb4934, #3c3836, #3c3836, #fb4934";
+/* color-window: "#353b45, #abb3bf, #61afef"; */
+/* color-normal: "#353b45, #abb2bf, #353b45, #353b45, #c8ccd4"; */
+/* color-active: "#353b45, #61afef, #353b45, #353b45, #61afef"; */
+/* color-urgent: "#353b45, #e06c75, #353b45, #353b45, #e06c75"; */
+
+/* color-window: "#1d2021, #3c3836, #d79921"; */
+/* color-normal: "#1d2021, #d5c4a1, #1d2021, #3c3836, #fbf1c7"; */
+/* color-active: "#3c3836, #83a598, #3c3836, #3c3836, #83a598"; */
+/* color-urgent: "#3c3836, #fb4934, #3c3836, #3c3836, #fb4934"; */
+
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	matching-negate-char: '-' /* unsupported */;*/

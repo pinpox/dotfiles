@@ -12,3 +12,6 @@ source ~/.vim/mappings.vim
 
 " APPEARANCE:
 source ~/.vim/style.vim
+
+" COC:
+source ~/.vim/coc_settings.vim

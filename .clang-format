@@ -2,7 +2,7 @@
 TabWidth: '4'
 UseTab: ForIndentation
 IndentWidth: 4
-AllowShortFunctionsOnASingleLine: Inline
+AllowShortFunctionsOnASingleLine: false
 AllowShortBlocksOnASingleLine: true
 AllowShortIfStatementsOnASingleLine: true
 AlwaysBreakBeforeMultilineStrings: true
