@@ -19,7 +19,9 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 xmodmap .Xmodmap
 
 export SSH_AUTH_SOCK
+xrandr --dpi 125.37
 exec i3
+# exec qtile
 # exec bspwm
 #exec dbus-launch xmonad
 

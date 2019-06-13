@@ -27,11 +27,11 @@ syntax on
 
 " let g:onedark_terminal_italics = 1
 set background=dark " for the dark version
-colorscheme one
 " colorscheme one
+colorscheme dracula
 
 " Airline
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 0            " Powerline Symbols in bar
-" let g:airline_theme='base16'
-let g:airline_theme='one'
+let g:airline_theme='dracula'
+" let g:airline_theme='one'
