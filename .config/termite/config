@@ -1,6 +1,8 @@
 [options]
 # font = monospace 7
-font   = xos4 Terminus 14px
+# font   = xos4 Terminus 14px
+# font = Office Code Pro
+font = Roboto Mono 14px
 audible_bell        = false
 scroll_on_output    = false
 scroll_on_keystroke = true
@@ -11,6 +13,7 @@ urgent_on_bell      = true
 clickable_url       = true
 scrollback_lines    = 10000
 search_wrap         = true
+# cell_height_scale = 1.5
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = xdg-open
@@ -97,54 +100,93 @@ browser = xdg-open
 # color15 = #3c3836
 
 
+# vim: ft=dosini cm=s#%s
+
+# # one dark
+# [colors]
+
+# # special
+# foreground      = #abb2bf
+# foreground_bold = #abb2bf
+# cursor          =
+# background      = #282c34
+
+# # black
+# color0  = #282c34
+# color8  = #5c6370
+
+# # red
+# color1  = #e06c75
+# color9  = #be5046
+
+# # green
+# color2  = #98c379
+# color10 = #7a9f60
+
+# # yellow
+# color3  = #e5c07b
+# color11 = #d19a66
+
+# # blue
+# color4  = #61afef
+# color12 = #3b84c0
+
+# # magenta
+# color5  = #c678dd
+# color13 = #9a52af
+
+# # cyan
+# color6  = #56b6c2
+# color14 = #3c909b
+
+# # white
+# color7  = #abb2bf
+# color15 = #828997
+
 # vim: ft=dosini cms=#%s
 
+
+# Dracula theme for termite
+# https://github.com/dracula/termite
+# Copyright 2013-present, All rights reserved
+# Code licensed under the MIT license
+
 [colors]
-# Base16 Gruvbox dark, hard
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-foreground          = #d5c4a1
-foreground_bold     = #ebdbb2
-cursor              = #ebdbb2
-cursor_foreground   = #1d2021
-background          = rgba(29, 32, 33)
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = #282a36
 
-# 16 color space
+# black
+color0  = #000000
+color8  = #4d4d4d
 
-# Black, Gray, Silver, White
-color0  = #1d2021
-color8  = #665c54
-color7  = #d5c4a1
-color15 = #fbf1c7
+# red
+color1  = #ff5555
+color9  = #ff6e67
 
-# Red
-color1  = #fb4934
-color9  = #fb4934
+# green
+color2  = #50fa7b
+color10 = #5af78e
 
-# Green
-color2  = #b8bb26
-color10 = #b8bb26
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
 
-# Yellow
-color3  = #fabd2f
-color11 = #fabd2f
+# blue
+color4  = #bd93f9
+color12 = #caa9fa
 
-# Blue
-color4  = #83a598
-color12 = #83a598
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
 
-# Purple
-color5  = #d3869b
-color13 = #d3869b
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
 
-# Teal
-color6  = #8ec07c
-color14 = #8ec07c
-
-# Extra colors
-color16 = #fe8019
-color17 = #d65d0e
-color18 = #3c3836
-color19 = #504945
-color20 = #bdae93
-color21 = #ebdbb2
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6
