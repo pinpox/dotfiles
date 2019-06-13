@@ -13,7 +13,6 @@ call plug#begin('~/.vim/plugged')
 " Plug 'benekastah/neomake'                                         " Linter/maker
 " Plug 'davinche/godown-vim'
 " Plug 'jiangmiao/auto-pairs'                                     " Auto-close brackets
-" Plug 'kovetskiy/sxhkd-vim'                      "  sxhkd - Simple X hotkey daemon
 " Plug 'rakr/vim-one'                         " Colorscheme
 " Plug 'reewr/vim-monokai-phoenix'                                " Colortheme
 " Plug 'edkolev/tmuxline.vim'
@@ -25,44 +24,47 @@ call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }            " Latex preview Plug
 
-" Appearance, bars, etc.
-Plug 'jeffkreeftmeijer/vim-dim'
-Plug 'noahfrederick/vim-noctu'
-Plug 'evgenyzinoviev/vim-vendetta'
-Plug 'chriskempson/base16-vim'                                    " Base16 colorschemes
-Plug 'mhartington/oceanic-next'
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'liuchengxu/space-vim-theme'
+" Colorschemes
+" Plug 'jeffkreeftmeijer/vim-dim'
+" Plug 'noahfrederick/vim-noctu'
+" Plug 'evgenyzinoviev/vim-vendetta'
+" Plug 'chriskempson/base16-vim'                                    " Base16 colorschemes
+" Plug 'mhartington/oceanic-next'
+" Plug 'kristijanhusak/vim-hybrid-material'
+" Plug 'liuchengxu/space-vim-theme'
 Plug 'rakr/vim-one'
+
+" Other appeareance
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-airline'                                          " Lean & mean status/tabline
-Plug 'lilydjwg/colorizer'                                         " Colorize color definitions
-Plug 'ap/vim-buftabline'                                          " Forget Vim tabs, now you can have buffer tabs
-Plug 'timakro/vim-searchant'                                      " Better highlighting of search
+Plug 'bling/vim-airline'                                        " Lean & mean status/tabline
+Plug 'lilydjwg/colorizer'                                       " Colorize color definitions
+Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
+Plug 'timakro/vim-searchant'                                    " Better highlighting of search
 
 " Syntax and language specific
-"TODO try out: sheerun/vim-polyglot " can replace python, i3, hastkell, vim-go
-Plug 'OrangeT/vim-csharp', {'for': 'cs'}                          " Csharp syntax
-Plug 'PotatoesMaster/i3-vim-syntax', {'for': 'i3'}                " I3-config syntax
-Plug 'hdima/python-syntax'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'jeroenbourgois/vim-actionscript'                            " Actionscript syntax
+" TODO try out: sheerun/vim-polyglot " can replace python, i3, hastkell, vim-go
+Plug 'OrangeT/vim-csharp', {'for': 'cs'}                        " Csharp syntax
+Plug 'PotatoesMaster/i3-vim-syntax', {'for': 'i3'}              " I3-config syntax
+Plug 'hdima/python-syntax', {'for': 'python'}
+Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
+Plug 'jeroenbourgois/vim-actionscript', {'for': 'actionscript'} " Actionscript syntax
 Plug 'fatih/vim-go'
-Plug 'buoto/gotests-vim'                                          " Generate test for Go function in current line
+Plug 'buoto/gotests-vim'                         " Generate test for Go function in current line
 Plug 'justinmk/vim-syntax-extra'
 Plug 'stevearc/vim-arduino'
 Plug 'pearofducks/ansible-vim'
 
 " Completion and snippets
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
-Plug 'zchee/deoplete-clang'
-Plug 'SirVer/ultisnips'                                           " Snippet engine
+"TODO Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
+"TODO Plug 'zchee/deoplete-clang'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+"TODO Plug 'SirVer/ultisnips'                                           " Snippet engine
 Plug 'honza/vim-snippets'                                         " Snippets
 Plug 'w0rp/ale'
 
 " Git
 Plug 'airblade/vim-gitgutter'                                     " Shows a git diff in the gutter
-Plug 'rhysd/committia.vim'
+Plug 'rhysd/committia.vim'                                        " Better commit message editor
 
 " Markup
 Plug 'godlygeek/tabular'                                          " The tabular plugin must come before vim-markdown
@@ -113,21 +115,21 @@ let g:livedown_browser = "firefox"                                " the browser 
 let g:UltiSnipsExpandTrigger="<tab>"
 
 " Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
-call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
-if !exists('g:deoplete#omni_patterns')
-	let g:deoplete#omni_patterns = {}
-endif
-let g:deoplete#omni_patterns.tex =
-			\ '\v\\%('
-			\ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-			\ . '|\a*ref%(\s*\{[^}]*|range\s*\{[^,}]*%(}\{)?)'
-			\ . '|hyperref\s*\[[^]]*'
-			\ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-			\ . '|%(include%(only)?|input)\s*\{[^}]*'
-			\ . ')\m'
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+" let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+" call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+" if !exists('g:deoplete#omni_patterns')
+" 	let g:deoplete#omni_patterns = {}
+" endif
+" let g:deoplete#omni_patterns.tex =
+" 			\ '\v\\%('
+" 			\ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+" 			\ . '|\a*ref%(\s*\{[^}]*|range\s*\{[^,}]*%(}\{)?)'
+" 			\ . '|hyperref\s*\[[^]]*'
+" 			\ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+" 			\ . '|%(include%(only)?|input)\s*\{[^}]*'
+" 			\ . ')\m'
 
 " Taskwarrior
 let g:task_default_prompt = [ 'project',  'description', 'due']

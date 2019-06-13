@@ -12,3 +12,10 @@ Xft*hinting:            full
 #include ".Xresources.d/st"
 #include ".Xresources.d/emacs"
 
+
+URxvt.font:           xft:Roboto Mono:pixelsize=14:antialias=true
+URxvt.imFont:         xft:Roboto Mono:pixelsize=14:antialias=true
+URxvt.boldFont:       xft:Roboto Mono:pixelsize=14:antialias=true
+URxvt.italicFont:     xft:Roboto Mono:pixelsize=14:antialias=true
+URxvt.boldItalicFont: xft:Roboto Mono:pixelsize=14:antialias=true
+!URxvt.letterSpace: -1
