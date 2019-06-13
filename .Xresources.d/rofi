@@ -7,9 +7,9 @@ rofi.hide-scrollbar: true
 rofi.separator-style: solid
 
 ! Font
-rofi.dpi: 144
+/* rofi.dpi: 144 */
 !rofi.font:DejaVu Sans Mono 8
-rofi.font:Terminus 8
+rofi.font: Roboto Mono 14
 
 ! Geometry
 rofi.fullscreen: true

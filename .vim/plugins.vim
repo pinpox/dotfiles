@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
 
 " Latex
 Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'dracula/vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }            " Latex preview Plug
 
 " Appearance, bars, etc.
