@@ -1,5 +1,5 @@
+! vi: ft=xdefaults
 ! Original theme https://github.com/nathanbuchar/atom-one-dark-terminal
-!! vi: ft=xdefaults
 !*.foreground:    #ABB2BF
 !*.background:    #1E2127
 !*.cursorColor:   #5C6370
