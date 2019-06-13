@@ -2,13 +2,13 @@
 
 
 ! General settings
-Xft*dpi:                125
+Xft*dpi:                125.37
 Xft*antialias:          true
 Xft*hinting:            full
 
 #include ".Xresources.d/colors"
 #include ".Xresources.d/urxvt"
 #include ".Xresources.d/rofi"
-#include ".Xresources.d/st"
+! #include ".Xresources.d/st"
 #include ".Xresources.d/emacs"
 
