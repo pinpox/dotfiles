@@ -2,7 +2,7 @@
 # font = monospace 7
 # font   = xos4 Terminus 14px
 # font = Office Code Pro
-font = Roboto Mono 14px
+font = RobotoMono Nerd Font 14px
 audible_bell        = false
 scroll_on_output    = false
 scroll_on_keystroke = true
