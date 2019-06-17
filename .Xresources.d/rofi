@@ -9,7 +9,7 @@ rofi.separator-style: solid
 ! Font
 /* rofi.dpi: 144 */
 !rofi.font:DejaVu Sans Mono 8
-rofi.font: Roboto Mono 14
+rofi.font: Roboto Mono 14px
 
 ! Geometry
 rofi.fullscreen: true
@@ -20,8 +20,14 @@ rofi.eh: 2
 ! Colors
 rofi.color-enabled: true
 ! Property Name     BG       Border   Separator
-rofi.color-window:  #1e1f29, #1e1f29, #57c7ff
-! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:  #1e1f29, #e2e4e5, #1e1f29, #4f4b59, #f1f1f0
-rofi.color-active:  #1e1f29, #57c7ff, #1e1f29, #4f4b59, #57c7ff
-rofi.color-urgent:  #1e1f29, #ff5c57, #1e1f29, #4f4b59, #ff5c57
+
+rofi.dpi: 125.35;
+
+/* dracula */
+/* ! Property Name     BG       Border   Separator */
+rofi.color-window:          #282A36, #282A36, #ea51b2
+
+/* ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG */
+rofi.color-normal:         #282A36, #e9e9f4, #282A36, #4d4d4d, #f7f7fb
+rofi.color-active:         #282A36, #62d6e8, #282A36, #282A36, #62d6e8
+rofi.color-urgent:         #282A36, #ea51b2, #282A36, #282A36, #ea51b2
