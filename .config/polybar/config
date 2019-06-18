@@ -1,20 +1,49 @@
 [colors]
-background     = ${xrdb:color0:#222}
-background-alt = ${xrdb:color8:#222}
-foreground     = ${xrdb:color7:#222}
-foreground-alt = ${xrdb:color8:#222}
-primary        = ${xrdb:color1:#222}
-secondary      = ${xrdb:color1:#222}
+background     = ${xrdb:background:#222}
+foreground     = ${xrdb:foreground:#222}
 alert          = ${xrdb:color1:#222}
 
-color-line-1 = ${xrdb:color1:#222}
-color-line-2 = ${xrdb:color1:#222}
-color-line-3 = ${xrdb:color2:#222}
-color-line-4 = ${xrdb:color3:#222}
-color-line-5 = ${xrdb:color4:#222}
-color-line-6 = ${xrdb:color5:#222}
-color-line-7 = ${xrdb:color6:#222}
-color-line-8 = ${xrdb:color8:#222}
+
+prefix-color = ${xrdb:color5:222}
+
+color-0 = ${xrdb:color0:#222}
+color-1 = ${xrdb:color1:#222}
+color-2 = ${xrdb:color2:#222}
+color-3 = ${xrdb:color3:#222}
+color-4 = ${xrdb:color4:#222}
+color-5 = ${xrdb:color5:#222}
+color-6 = ${xrdb:color6:#222}
+color-7 = ${xrdb:color7:#222}
+color-8 = ${xrdb:color8:#222}
+color-9 = ${xrdb:color9:#222}
+color-10 = ${xrdb:color10:#222}
+color-11 = ${xrdb:color11:#222}
+color-12 = ${xrdb:color12:#222}
+color-13 = ${xrdb:color13:#222}
+color-14 = ${xrdb:color14:#222}
+color-15 = ${xrdb:color15:#222}
+
+
+
+
+; *.foreground: #F8F8F2
+; *.background: #282A36
+; *.color0:     #000000
+; *.color8:     #4D4D4D
+; *.color1:     #FF5555
+; *.color9:     #FF6E67
+; *.color2:     #50FA7B
+; *.color10:    #5AF78E
+; *.color3:     #F1FA8C
+; *.color11:    #F4F99D
+; *.color4:     #BD93F9
+; *.color12:    #CAA9FA
+; *.color5:     #FF79C6
+; *.color13:    #FF92D0
+; *.color6:     #8BE9FD
+; *.color14:    #9AEDFE
+; *.color7:     #BFBFBF
+; *.color15:    #E6E6E6
 
 [bar/primary]
 bottom = true
@@ -26,60 +55,51 @@ radius = 0
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = ${colors.color-line-1}
+line-size = 0
 
 border-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 0
 
 ; font-0 = "Terminus:pixelsize=8"
 font-0 = "Roboto Mono:pixelsize=8"
-font-1 = "fontawesome:pixelsize=9"
+font-1 = "fontawesome:pixelsize=8"
 
+; separator = ""
 modules-left = i3
 modules-center = music
-modules-right = pkg weather filesystem backlight-acpi volume xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = pkg weather filesystem backlight-acpi volume memory cpu wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
+tray-background = ${colors.color-4}
 
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = "%name%"
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 interval = 25
 mount-0 = /
 type = internal/fs
 
-format-mounted-underline =  ${colors.color-line-1}
 
-format-mounted-prefix-foreground = ${colors.foreground-alt}
-; format-mounted-prefix = " "
+format-mounted-prefix-foreground = ${colors.prefix-color}
+format-unmounted-prefix-foreground = ${colors.prefix-color}
 format-mounted-prefix = " "
 
-label-mounted = %mountpoint%%{F-}: %percentage_used%% [%free%]
+
+format-mounted-padding = 2
+format-unmounted-padding = 2
+
+format-mounted-background = ${colors.color-8}
+format-unmounted-background = ${colors.color-8}
+label-mounted = %mountpoint%: %percentage_used%% [%free%]
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.foreground}
 
 
 [module/i3]
@@ -92,24 +112,23 @@ wrapping-scroll = false
 pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.primary}
+label-focused-background = ${colors.color-4}
+label-focused-foreground = ${colors.background}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
 label-unfocused-padding = 2
+label-unfocused-background = ${colors.color-8}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
+label-visible-background = ${colors.color-8}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
@@ -117,13 +136,16 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 [module/xbacklight]
-format-underline = ${colors.color-line-2}
 type = internal/xbacklight
 
+
+format-padding = 2
+format-muted-padding = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.prefix-color}
 format = <label>
 label = %percentage%%
+format-background = ${colors.color-8}
 
 bar-width = 10
 bar-indicator = |
@@ -134,10 +156,9 @@ bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+bar-empty-foreground = ${colors.foreground}
 
 [module/backlight-acpi]
-format-underline = ${colors.color-line-3}
 inherit = module/xbacklight
 type = internal/backlight
 card = acpi_video0
@@ -146,51 +167,55 @@ card = acpi_video0
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.color-line-4}
+format-prefix-foreground = ${colors.prefix-color}
+format-background = ${colors.color-8}
 label = %percentage%%
+
+
+format-padding = 2
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.color-line-5}
+format-prefix-foreground = ${colors.prefix-color}
+format-background = ${colors.color-8}
 label = %percentage_used%%
+format-padding = 2
 
 [module/wlan]
 type = internal/network
 interface = wlan0
 interval = 3.0
 
+format-connected-padding = 2
+format-disconnected-padding = 2
+
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-background = ${colors.color-8}
 label-connected = %signal%% %essid%
 
 format-disconnected =
 ; format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected-foreground = ${colors.foreground}
 
 ramp-signal-0 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-foreground = ${colors.prefix-color}
 
 [module/eth]
 type = internal/network
 interface = eth0
 interval = 3.0
 
-format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
@@ -203,33 +228,39 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.color-4}
+
+format-foreground = ${colors.background}
+format-background = ${colors.color-4}
+format-padding = 2
 
 label = %date% %time%
 
 [module/volume]
-format-volume-underline = #422ff0
 type = internal/volume
 
 format-volume = <ramp-volume> <label-volume>
 
 
+format-volume-padding = 2
+format-muted-padding = 2
+
+format-volume-background = ${colors.color-8}
+format-muted-background = ${colors.color-8}
 label-volume = %percentage%
 label-volume-foreground = ${root.foreground}
 
 
 ;format-volume-prefix = %ramp-volume%
 ;
-format-volume-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
 
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.foreground}
 label-muted = "  000"
 
 label-muted-foreground = #66
 
-ramp-volume-foreground =  ${colors.foreground-alt}
+ramp-volume-foreground =  ${colors.prefix-color}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -240,30 +271,32 @@ adapter = ACAD
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-discharging =  <ramp-capacity> <label-discharging>
+format-charging-padding = 2
+format-discharging-padding = 2
 
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-full-prefix = " "
+label-full-background = ${colors.color-3}
 
-format-full-prefix = ""
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+ramp-capacity-foreground = ${colors.prefix-color}
+animation-charging-foreground = ${colors.prefix-color}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-
-animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
+
+
+format-discharging-background = ${colors.color-8}
+format-charging-background = ${colors.color-8}
+format-full-background = ${colors.color-8}
 
 [module/temperature]
 type = internal/temperature
@@ -271,9 +304,7 @@ thermal-zone = 1
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -282,43 +313,20 @@ label-warn-foreground = ${colors.secondary}
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-foreground = ${colors.foreground}
 
-[module/powermenu]
-type = custom/menu
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [module/weather]
 
-format-underline = #79c3ce
 type = custom/script
 interval = 10
 format = <label>
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.prefix-color}
+
+
+format-padding = 2
+format-background = ${colors.color-8}
 exec = ~/.config/polybar/weather
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
@@ -346,7 +354,9 @@ click-right = "playerctl next"
 type = custom/script
 interval = 1200
 format = <label>
-format-underline = #dc322f
+
+format-padding = 2
+format-background = ${colors.color-8}
 label = "%output:0:30%"
 exec = .config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
