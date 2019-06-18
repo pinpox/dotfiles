@@ -1,4 +1,5 @@
 [MailMover]
+rename = true
 folders = mailbox/INBOX committance/INBOX
 
 # rules
