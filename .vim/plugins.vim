@@ -58,8 +58,10 @@ Plug 'pearofducks/ansible-vim'
 " Completion and snippets
 "TODO Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
 "TODO Plug 'zchee/deoplete-clang'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 "TODO Plug 'SirVer/ultisnips'                                           " Snippet engine
+"
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'                                         " Snippets
 Plug 'w0rp/ale'
 

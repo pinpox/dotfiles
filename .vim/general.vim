@@ -30,6 +30,7 @@ set noexpandtab                " Don't expand tabs to spaces
 set undodir=~/.vimtmp          " Dir for undofiles, same dir as the tempdir
 set wildmenu                   " Complete commands
 set wrapscan                   " Wrap when searching to beginning
+set mouse=a
 set path+=**                   " Search down into subfolders, provides tab-completion for all file-related tasks
 syntax enable                  " enable syntax highlighting
 

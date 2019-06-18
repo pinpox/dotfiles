@@ -6,6 +6,8 @@
 			"filetypes": ["go"]
 		}
 	},
-"suggest.snippetIndicator": "►"
+"suggest.snippetIndicator": " ► ",
+"suggest.triggerAfterInsertEnter": true,
+"suggest.minTriggerInputLength": 1,
 }
 
