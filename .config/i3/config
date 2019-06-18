@@ -3,7 +3,8 @@
 set $mod Mod4
 bindsym $mod+Shift+s sticky toggle
 
-font pango:Terminus 14px
+# font pango:Terminus 14px
+ font pango:Roboto Mono 14px
 # font pango:Ubuntu Mono, FontAwesome 8
 for_window [window_role="pop-up"] floating enable
 new_window pixel 2
@@ -29,7 +30,7 @@ bindsym $mod+Shift+x          exec ~/.local/bin/lock
 bindsym $mod+Shift+Escape     exec xkill
 bindsym --release Shift+Print exec import png:- | xclip -selection c -t image/png
 bindsym --release Print       exec ~/.local/bin/shadow-scrot.sh
-bindcode 156                  exec --no-startup-id " urxvt -e hollywood"
+bindcode 156                  exec --no-startup-id " termite -e hollywood"
 bindsym $mod+space            exec emacsclient -nc
 
 # Make the currently focused window a scratchpad
@@ -40,8 +41,8 @@ bindsym $mod+plus scratchpad show
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec  urxvt -e nvim
+bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec  termite -e nvim
 
 # kill focused window
 bindsym $mod+Shift+q kill
