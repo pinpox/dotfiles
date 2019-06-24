@@ -1,3 +1,6 @@
 [submodule ".emacs.d"]
   path = .emacs.d
   url = git://github.com/binaryplease/dotemacs
+[submodule ".config/neomutt/.config/neomutt/dracula_theme"]
+	path = .config/neomutt/.config/neomutt/dracula_theme
+	url = https://github.com/dracula/mutt.git
