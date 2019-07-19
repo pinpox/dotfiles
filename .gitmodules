@@ -4,3 +4,6 @@
 [submodule ".config/neomutt/.config/neomutt/dracula_theme"]
 	path = .config/neomutt/.config/neomutt/dracula_theme
 	url = https://github.com/dracula/mutt.git
+[submodule ".config/neomutt/dracula_theme"]
+	path = .config/neomutt/dracula_theme
+	url = https://github.com/dracula/mutt.git
