@@ -13,5 +13,8 @@ source ~/.vim/mappings.vim
 " APPEARANCE:
 source ~/.vim/style.vim
 
+" LANGUAGESERVER:
+source ~/.vim/lsp.vim
+
 " COC:
-source ~/.vim/coc_settings.vim
+" source ~/.vim/coc_settings.vim

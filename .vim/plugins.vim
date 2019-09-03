@@ -56,12 +56,25 @@ Plug 'stevearc/vim-arduino'
 Plug 'pearofducks/ansible-vim'
 
 " Completion and snippets
-"TODO Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
-"TODO Plug 'zchee/deoplete-clang'
+" "TODO
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
+Plug 'zchee/deoplete-clang'
+Plug 'prabirshrestha/async.vim'
+" " Plug 'prabirshrestha/vim-lsp'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+
+" Plug 'thomasfaingnaert/vim-lsp-snippets'
+" Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+" Plug 'lighttiger2505/deoplete-vim-lsp'
 " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-"TODO Plug 'SirVer/ultisnips'                                           " Snippet engine
+Plug 'SirVer/ultisnips'                                           " Snippet engine
 "
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'                                         " Snippets
 Plug 'w0rp/ale'
 
@@ -116,23 +129,25 @@ let g:livedown_browser = "firefox"                                " the browser 
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Deoplete
-" let g:deoplete#enable_at_startup = 1
-" let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-" let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
-" call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
-" if !exists('g:deoplete#omni_patterns')
-" 	let g:deoplete#omni_patterns = {}
-" endif
-" let g:deoplete#omni_patterns.tex =
-" 			\ '\v\\%('
-" 			\ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-" 			\ . '|\a*ref%(\s*\{[^}]*|range\s*\{[^,}]*%(}\{)?)'
-" 			\ . '|hyperref\s*\[[^]]*'
-" 			\ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-" 			\ . '|%(include%(only)?|input)\s*\{[^}]*'
-" 			\ . ')\m'
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+if !exists('g:deoplete#omni_patterns')
+	let g:deoplete#omni_patterns = {}
+endif
+let g:deoplete#omni_patterns.tex =
+			\ '\v\\%('
+			\ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+			\ . '|\a*ref%(\s*\{[^}]*|range\s*\{[^,}]*%(}\{)?)'
+			\ . '|hyperref\s*\[[^]]*'
+			\ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+			\ . '|%(include%(only)?|input)\s*\{[^}]*'
+			\ . ')\m'
 
 " Taskwarrior
 let g:task_default_prompt = [ 'project',  'description', 'due']
@@ -159,3 +174,4 @@ let g:switch_custom_definitions =
 			\   ['_', '#'],
 			\   ['LOW', 'HIGH']
 			\ ]
+
