@@ -8,7 +8,7 @@ set signature="~/.config/neomutt/acc1_signature"
 
 # Credentials and security
 set imap_user="pablo1@mailbox.org"
-set imap_pass="`pass mailbox.org/pablo1`"
+set imap_pass="`pass mailbox.org/pablo1@mailbox.org`"
 set smtp_url = "smtps://$imap_user@smtp.mailbox.org:465/"
 set smtp_pass = $imap_pass
 set ssl_force_tls = yes
