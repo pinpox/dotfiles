@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/binaryplease/.gtkrc-2.0.mine"
-gtk-theme-name="oomox-pablo-arc2"
-gtk-icon-theme-name="Paper-Mono-Dark"
+gtk-theme-name="Flat-Plat-base16-tomorrow-dark-compact"
+gtk-icon-theme-name="Numix"
 gtk-font-name="Roboto Mono 8"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
@@ -13,7 +13,7 @@ gtk-button-images=1
 gtk-menu-images=1
 gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
-gtk-xft-antialias=0
-gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
+gtk-xft-antialias=1
+gtk-xft-hinting=0
+gtk-xft-hintstyle="hintmedium"
 gtk-xft-rgba="rgb"
