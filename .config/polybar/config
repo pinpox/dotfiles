@@ -4,7 +4,7 @@ foreground     = ${xrdb:foreground:#222}
 alert          = ${xrdb:color1:#222}
 
 
-prefix-color = ${xrdb:color5:222}
+prefix-color = ${xrdb:color4:222}
 
 color-0 = ${xrdb:color0:#222}
 color-1 = ${xrdb:color1:#222}

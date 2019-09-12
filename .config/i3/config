@@ -12,6 +12,7 @@ new_float pixel 2
 
 
 exec        srandrd display_handler
+exec        xscreensaver -no-splash
 exec_always --no-startup-id xbindkeys -f .xbindkeys_config/speed_c/pablo
 exec_always setxkbmap us -variant colemak -option "caps:escape"
 exec_always nitrogen --restore
@@ -27,7 +28,8 @@ bindsym --release $mod+n      exec xdotool type --delay 80 --clearmodifiers --wi
 bindsym $mod+p                exec rofi -show run -lines 7 -eh 1 -bw 0  -fullscreen -padding 200
 bindsym $mod+Shift+p          exec rofi-pass -show combi -lines 7 -eh 3 -bw 0 -matching fuzzy
 bindsym $mod+Pause            exec chromium
-bindsym $mod+Shift+x          exec ~/.local/bin/lock
+# bindsym $mod+Shift+x          exec ~/.local/bin/lock
+bindsym $mod+Shift+x          exec xscreensaver-command -lock
 bindsym $mod+Shift+Escape     exec xkill
 bindsym --release Shift+Print exec import png:- | xclip -selection c -t image/png
 bindsym --release Print       exec ~/.local/bin/shadow-scrot.sh
