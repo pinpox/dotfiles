@@ -23,11 +23,10 @@ rofi.color-enabled: true
 
 rofi.dpi: 125.35;
 
-/* dracula */
-/* ! Property Name     BG       Border   Separator */
-rofi.color-window:          #282A36, #282A36, #ea51b2
+! Property Name               BG       Border   Separator
+rofi.color-window:            #282a2e, #282a2e, #81a2be
 
-/* ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG */
-rofi.color-normal:         #282A36, #e9e9f4, #282A36, #4d4d4d, #f7f7fb
-rofi.color-active:         #282A36, #62d6e8, #282A36, #282A36, #62d6e8
-rofi.color-urgent:         #282A36, #ea51b2, #282A36, #282A36, #ea51b2
+! Property Name               BG       FG       BG-alt   Head-BG  Head-FG 
+rofi.color-normal:            #282a2e, #c5c8c6, #282a2e, #373b41, #ffffff
+rofi.color-active:            #282a2e, #81a2be, #282a2e, #282a2e, #81a2be
+rofi.color-urgent:            #282a2e, #cc6666, #282a2e, #282a2e, #cc6666
