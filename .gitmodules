@@ -7,3 +7,6 @@
 [submodule ".config/neomutt/dracula_theme"]
 	path = .config/neomutt/dracula_theme
 	url = https://github.com/dracula/mutt.git
+[submodule ".Xresources.d/base16-xresources"]
+	path = .Xresources.d/base16-xresources
+	url = git@github.com:binaryplease/base16-xresources.git

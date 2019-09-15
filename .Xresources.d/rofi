@@ -23,10 +23,10 @@ rofi.color-enabled: true
 
 rofi.dpi: 125.35;
 
-! Property Name               BG       Border   Separator
-rofi.color-window:            #282a2e, #282a2e, #81a2be
+! Property Name     BG       Border   Separator
+rofi.color-window:  base00, base00, base0D
 
-! Property Name               BG       FG       BG-alt   Head-BG  Head-FG 
-rofi.color-normal:            #282a2e, #c5c8c6, #282a2e, #373b41, #ffffff
-rofi.color-active:            #282a2e, #81a2be, #282a2e, #282a2e, #81a2be
-rofi.color-urgent:            #282a2e, #cc6666, #282a2e, #282a2e, #cc6666
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  base00, base05, base00, base01, base07
+rofi.color-active:  base00, base0D, base00, base00, base0D
+rofi.color-urgent:  base00, base08, base00, base00, base08
