@@ -42,6 +42,8 @@ function setup_dotfiles() {
 	config checkout 2>&1 | awk '/^[[:space:]]/{print $1}' | backup_conf
 	config checkout
 	config config status.showUntrackedFiles no
+	config  submodule update --init --recursive
+
 }
 
 function setup_vim() {

@@ -19,6 +19,7 @@ SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr__2D_:cd\x20\x2d
 SETUVAR _fish_abbr__3B_q:exit
 SETUVAR _fish_abbr_c:config
+SETUVAR _fish_abbr_m:neomutt
 SETUVAR _fish_abbr_o:xdg\x2dopen
 SETUVAR _fish_abbr_q:exit
 SETUVAR _fish_abbr_snvim:sudo\x20\x2dE\x20nvim
