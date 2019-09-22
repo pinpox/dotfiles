@@ -2,7 +2,7 @@
 # Prevents grep options deprecation message
 unset GREP_OPTIONS
 
-HISTFILE=~/.histfile
+HISTFILE=~/.config/zsh/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -53,9 +53,10 @@ source ~/.zsh_plugins.sh
 
 source ~/.zsh_functions
 source ~/.zsh_aliases
+compdef config="git"
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
+	exec startx
 fi
 
 export GPG_TTY=$(tty)
@@ -67,23 +68,47 @@ export GPG_TTY=$(tty)
 # PROMPT='%(?.%F{magenta}.%F{red})${prompt_symbol}%f '
 SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh; export SSH_AUTH_SOCK;
 
-# PURE_PROMPT_SYMBOL='>'
-# PURE_PROMPT_SYMBOL='▸'
-# PURE_PROMPT_SYMBOL='▪'
-# PURE_PROMPT_SYMBOL='◼'
+# Other prompt sympols for copy/paste ▸ ▪ ◼ ❱ ❭ ➙ ➫ ➸ ⟫
 PURE_PROMPT_SYMBOL='✱'
-# PURE_PROMPT_SYMBOL='❱'
-# PURE_PROMPT_SYMBOL='❭'
-# PURE_PROMPT_SYMBOL='➙'
-# PURE_PROMPT_SYMBOL='➫'
-# PURE_PROMPT_SYMBOL='➸'
-# PURE_PROMPT_SYMBOL='⟫'
 
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-compdef config="git"
 
 # Colors
 # wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors
-eval $(dircolors -b $HOME/.dircolors) 
+eval $(dircolors -b $HOME/.dircolors)
 # . $HOME/.dircolors
 
+
+#  # vim mode config
+#     # ---------------
+
+#     # Activate vim mode.
+#     bindkey -v
+
+#     # Remove mode switching delay.
+#     KEYTIMEOUT=5
+
+#     # Change cursor shape for different vi modes.
+#     function zle-keymap-select {
+#       if [[ ${KEYMAP} == vicmd ]] ||
+#          [[ $1 = 'block' ]]; then
+#         echo -ne '\e[1 q'
+
+#       elif [[ ${KEYMAP} == main ]] ||
+#            [[ ${KEYMAP} == viins ]] ||
+#            [[ ${KEYMAP} = '' ]] ||
+#            [[ $1 = 'beam' ]]; then
+#         echo -ne '\e[5 q'
+#       fi
+#     }
+#     zle -N zle-keymap-select
+
+#     # Use beam shape cursor on startup.
+#     echo -ne '\e[5 q'
+
+#     # Use beam shape cursor for each new prompt.
+
+# _fix_cursor() {
+#    echo -ne '\e[5 q'
+# }
+
+# precmd_functions+=(_fix_cursor)
