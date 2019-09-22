@@ -25,5 +25,5 @@ abbrev-alias v="nvim"
 abbrev-alias y="yay"
 
 # Global aliases, get expaned everywhere
-abbrev-alias -g G="| grep"
+abbrev-alias -g G="| grep -i"
 abbrev-alias -g P="| ix"
