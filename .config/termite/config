@@ -3,6 +3,7 @@
 # font   = xos4 Terminus 14px
 # font = Office Code Pro
 font = RobotoMono 14px
+# font = Victor Mono Medium 14px
 audible_bell        = false
 scroll_on_output    = false
 scroll_on_keystroke = true
@@ -18,224 +19,52 @@ search_wrap         = true
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = xdg-open
 
-# [colors]
-# background        = #1e1f29
-# foreground        = #ffffff
-# cursor            = #ffffff
-# cursor_foreground = #1e1f29
-
-# color0            = #393c51
-# color8            = #4f545d
-
-# color1            = #ff5c57
-# color9            = #ff5c57
-
-# color2            = #5af78e
-# color10           = #5af78e
-
-# color3            = #f3f99d
-# color11           = #f3f99d
-
-# color4            = #57c7ff
-# color12           = #57c7ff
-
-# color5            = #ff6ac1
-# color13           = #ff6ac1
-
-# color6            = #9aedfe
-# color14           = #9aedfe
-
-# color7            = #ffffff
-# color15           = #ffffff
-
-# # Extra colors
-# color16           = #ff9f43
-# color17           = #b2643c
-# color18           = #34353e
-# color19           = #4a4b53
-# color20           = #a5a5a9
-# color21           = #f1f1f0
-
-
-
-
-# Gruvbox-light
-# [colors]
-# # hard contrast: background = #f9f5d7
-# background = #fbf1c7
-# # soft contrast: background = #f2e5bc
-# foreground = #3c3836
-# foreground_bold = #3c3836
-
-# # light0 + gray
-# color0 = #fbf1c7
-# color8 = #928374
-
-# # neutral_red + faded_red
-# color1 = #cc241d
-# color9 = #9d0006
-
-# # neutral_green + faded_green
-# color2 = #98971a
-# color10 = #79740e
-
-# # neutral_yellow + faded_yellow
-# color3 = #d79921
-# color11 = #b57614
-
-# # neutral_blue + faded_blue
-# color4 = #458588
-# color12 = #076678
-
-# # neutral_purple + faded_purple
-# color5 = #b16286
-# color13 = #8f3f71
-
-# # neutral_aqua + faded_aqua
-# color6 = #689d6a
-# color14 = #427b58
-
-# # dark4 + dark1
-# color7 = #7c6f64
-# color15 = #3c3836
-
-
-# vim: ft=dosini cm=s#%s
-
-# # one dark
-# [colors]
-
-# # special
-# foreground      = #abb2bf
-# foreground_bold = #abb2bf
-# cursor          =
-# background      = #282c34
-
-# # black
-# color0  = #282c34
-# color8  = #5c6370
-
-# # red
-# color1  = #e06c75
-# color9  = #be5046
-
-# # green
-# color2  = #98c379
-# color10 = #7a9f60
-
-# # yellow
-# color3  = #e5c07b
-# color11 = #d19a66
-
-# # blue
-# color4  = #61afef
-# color12 = #3b84c0
-
-# # magenta
-# color5  = #c678dd
-# color13 = #9a52af
-
-# # cyan
-# color6  = #56b6c2
-# color14 = #3c909b
-
-# # white
-# color7  = #abb2bf
-# color15 = #828997
-
-# vim: ft=dosini cms=#%s
-
-
-# Dracula theme for termite
-# https://github.com/dracula/termite
-# Copyright 2013-present, All rights reserved
-# Code licensed under the MIT license
-
 [colors]
+# Base16 Seti UI
+# Author: 
 
-# dracula
-# # special
-# foreground      = #f8f8f2
-# foreground_bold = #f8f8f2
-# cursor          = #f8f8f2
-# background      = #282a36
-
-# # black
-# color0  = #000000
-# color8  = #4d4d4d
-
-# # red
-# color1  = #ff5555
-# color9  = #ff6e67
-
-# # green
-# color2  = #50fa7b
-# color10 = #5af78e
-
-# # yellow
-# color3  = #f1fa8c
-# color11 = #f4f99d
-
-# # blue
-# color4  = #bd93f9
-# color12 = #caa9fa
-
-# # magenta
-# color5  = #ff79c6
-# color13 = #ff92d0
-
-# # cyan
-# color6  = #8be9fd
-# color14 = #9aedfe
-
-# # white
-# color7  = #bfbfbf
-# color15 = #e6e6e6
-
-# material-darker
-
-foreground          = #EEFFFF
-foreground_bold     = #EEFFFF
-cursor              = #EEFFFF
-cursor_foreground   = #212121
-background          = rgba(33, 33, 33)
+foreground          = #d6d6d6
+foreground_bold     = #eeeeee
+cursor              = #eeeeee
+cursor_foreground   = #151718
+background          = rgba(21, 23, 24)
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #212121
-color8  = #4A4A4A
-color7  = #EEFFFF
-color15 = #FFFFFF
+color0  = #151718
+color8  = #41535B
+color7  = #d6d6d6
+color15 = #ffffff
 
 # Red
-color1  = #F07178
-color9  = #F07178
+color1  = #Cd3f45
+color9  = #Cd3f45
 
 # Green
-color2  = #C3E88D
-color10 = #C3E88D
+color2  = #9fca56
+color10 = #9fca56
 
 # Yellow
-color3  = #FFCB6B
-color11 = #FFCB6B
+color3  = #e6cd69
+color11 = #e6cd69
 
 # Blue
-color4  = #82AAFF
-color12 = #82AAFF
+color4  = #55b5db
+color12 = #55b5db
 
 # Purple
-color5  = #C792EA
-color13 = #C792EA
+color5  = #a074c4
+color13 = #a074c4
 
 # Teal
-color6  = #89DDFF
-color14 = #89DDFF
+color6  = #55dbbe
+color14 = #55dbbe
 
 # Extra colors
-color16 = #F78C6C
-color17 = #FF5370
-color18 = #303030
-color19 = #353535
-color20 = #B2CCD6
-color21 = #EEFFFF
+color16 = #db7b55
+color17 = #8a553f
+color18 = #282a2b
+color19 = #3B758C
+color20 = #43a5d5
+color21 = #eeeeee
