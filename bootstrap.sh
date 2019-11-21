@@ -81,39 +81,19 @@ last_version_antibody() {
 		cut -f8 -d'/'
 }
 
-
-
 function install_antibody() {
-
-	set -e
-	DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download"
-	test -z "$TMPDIR" && TMPDIR="$(mktemp -d)"
-
-	version="$(last_version_antibody)" || true
-	test -z "$version" && {
-		echo "Unable to get antibody version."
-	exit 1
-}
-
-	echo "Downloading antibody $version for $(uname -s)_$(uname -m)..."
-	rm -f "$TMPDIR/antibody.tar.gz"
-	curl -s -L -o "$TMPDIR/antibody.tar.gz" \
-		"$DOWNLOAD_URL/$version/antibody_$(uname -s)_$(uname -m).tar.gz" || true
-
-	tar -xf "$TMPDIR/antibody.tar.gz" -C "$TMPDIR"
-
-	mv -f "$TMPDIR"/antibody ~/.local/bin/antibody
-	command -v antibody
-
-	echo "Installing ZSH plugins..."
-    antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
-
+	curl -sfL git.io/antibody | sh -s - -b .local/bin
 }
 
 function setup_git {
 	git config --global user.name "Pablo Ovelleiro Corral"
 	git config --global user.email "pablo1@mailbox.org"
 	git config --global commit.gpgsign true
+}
+
+function setup_terminfo {
+	wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo
+	tic -x termite.terminfo
 }
 
 # Function to confirm execution. Call confirmExecute <message> <command>
@@ -124,6 +104,6 @@ confirmExecute "Setup dotfiles? [Y/n]"  setup_dotfiles
 confirmExecute "Setup VIM/Neovim? [Y/n]" setup_vim
 confirmExecute "Set ZSH as shell? [Y/n]" chsh -s /bin/zsh
 confirmExecute "Install antibody? [Y/n]" install_antibody
-confirmExecute "Install termite terminfo? [Y/n]" tic -x ./local/share/termite.terminfo
+confirmExecute "Install termite terminfo? [Y/n]" setup_terminfo
 confirmExecute "Setup git configuration? [Y/n]" setup_git
 
