@@ -26,5 +26,5 @@ set message_cachedir = ~/.config/neomutt/acc2_folder/cache/bodies
 set certificate_file = ~/.config/neomutt/acc2_folder/cache/certificates
 
 # Hooks
-save-hook . =Archives/%[%Y]
+save-hook . =Archive/%[%Y]
 
