@@ -4,3 +4,6 @@
 [submodule ".config/neomutt/.config/neomutt/dracula_theme"]
 	path = .config/neomutt/.config/neomutt/dracula_theme
 	url = https://github.com/dracula/mutt.git
+[submodule "/home/binaryplease/.tmux/plugins/tpm"]
+	path = /home/binaryplease/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
