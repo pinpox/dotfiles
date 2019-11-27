@@ -6,7 +6,7 @@ Xft*dpi:                125.37
 Xft*antialias:          true
 Xft*hinting:            full
 
-#include ".Xresources.d/base16-xresources/xresources/base16-seti-256.Xresources"
+#include ".Xresources.d/base16-xresources/xresources/base16-onedark-256.Xresources"
 #include ".Xresources.d/urxvt"
 #include ".Xresources.d/rofi"
 #include ".Xresources.d/emacs"
