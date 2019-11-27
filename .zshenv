@@ -1,3 +1,4 @@
+ZDOTDIR=$HOME/.config/zsh
 export PATH="$PATH:\
 .local/bin:\
 /home/binaryplease/.go/bin/:\
@@ -14,3 +15,5 @@ PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
 
 export GOPATH=~/.go
+
+

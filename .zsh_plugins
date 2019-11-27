@@ -21,3 +21,5 @@ sorin-ionescu/prezto folder:modules/zsh-history-substring-search
 # # Other
 sindresorhus/pure
 ael-code/zsh-colored-man-pages
+
+momo-lab/zsh-abbrev-alias

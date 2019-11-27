@@ -7,3 +7,12 @@
 [submodule "/home/binaryplease/.tmux/plugins/tpm"]
 	path = /home/binaryplease/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule ".config/neomutt/dracula_theme"]
+	path = .config/neomutt/dracula_theme
+	url = https://github.com/dracula/mutt.git
+[submodule ".Xresources.d/base16-xresources"]
+	path = .Xresources.d/base16-xresources
+	url = git@github.com:binaryplease/base16-xresources.git
+[submodule ".config/base16-shell"]
+	path = .config/base16-shell
+	url = https://github.com/chriskempson/base16-shell.git

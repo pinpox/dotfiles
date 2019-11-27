@@ -6,7 +6,7 @@
 	helper = /usr/bin/pass-git-helper
 [commit]
 	gpgsign = true
-[url "pablo-tools.duckdns.org"]
+[url "pablo.tools"]
 	insteadOf = sellerie.duckdns.org
 
 [pack]
@@ -17,6 +17,7 @@
 	excludesfile = /home/binaryplease/.gitignore_global
 	autocrlf = input
 	safecrlf = true
+	editor = nvim
 
 [alias]
     l = log --oneline --decorate --graph

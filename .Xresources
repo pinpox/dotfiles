@@ -6,12 +6,10 @@ Xft*dpi:                125.37
 Xft*antialias:          true
 Xft*hinting:            full
 
-#include ".Xresources.d/colors"
+#include ".Xresources.d/base16-xresources/xresources/base16-seti-256.Xresources"
 #include ".Xresources.d/urxvt"
 #include ".Xresources.d/rofi"
-! #include ".Xresources.d/st"
 #include ".Xresources.d/emacs"
-
 
 URxvt.font:           xft:Roboto Mono:pixelsize=14:antialias=true
 URxvt.imFont:         xft:Roboto Mono:pixelsize=14:antialias=true
