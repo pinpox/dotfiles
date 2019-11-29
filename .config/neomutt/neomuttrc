@@ -80,5 +80,5 @@ source ./sidebar.muttrc
 
 
 ##### Colors
-source ~/.config/neomutt/dracula_theme/dracula.muttrc
-# source ~/.config/neomutt/colors.muttrc
+# source ~/.config/neomutt/dracula_theme/dracula.muttrc
+source ~/.config/neomutt/colors.muttrc
